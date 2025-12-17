@@ -1,0 +1,3702 @@
+2025-11-25 18:55:42 [INFO] ============================================================
+2025-11-25 18:55:42 [INFO] 🚀 キクヤカメラ スクレイピング開始（デバッグ版）
+2025-11-25 18:55:42 [INFO] ============================================================
+2025-11-25 18:55:42 [INFO] ============================================================
+2025-11-25 18:55:42 [INFO] 🔍 1位商品一貫性チェック開始 (2回)
+2025-11-25 18:55:42 [INFO] ============================================================
+2025-11-25 18:55:42 [INFO] 
+🔍 チェック 1/2
+2025-11-25 18:55:42 [INFO] 🌐 Playwrightブラウザ起動中...
+2025-11-25 18:55:42 [DEBUG] Using selector: EpollSelector
+2025-11-25 18:55:43 [INFO] 🌐 ページ読み込み中... https://kikuya-camera.shop-pro.jp/?mode=srh&cid=&keyword=&sort=n
+2025-11-25 18:55:45 [INFO] ⏳ 商品リスト表示待機中...
+2025-11-25 18:55:45 [INFO] ⏳ JavaScript並び替え待機中...
+2025-11-25 18:55:47 [INFO] ⏳ DOM安定化確認中...
+2025-11-25 18:55:48 [INFO]    ✓ 安定: 1/3回 (商品数=100件, 1位=IWC...)
+2025-11-25 18:55:49 [INFO]    ✓ 安定: 2/3回 (商品数=100件, 1位=IWC...)
+2025-11-25 18:55:49 [INFO]    ✓ 安定: 3/3回 (商品数=100件, 1位=IWC...)
+2025-11-25 18:55:49 [INFO] ✅ DOM安定化確認完了: チェック=4回
+2025-11-25 18:55:49 [INFO] ================================================================================
+2025-11-25 18:55:49 [INFO] 🔍 デバッグ: 全.item_box要素の構造ダンプ
+2025-11-25 18:55:49 [INFO] ================================================================================
+2025-11-25 18:55:49 [INFO] 検出された.item_box要素数: 100件
+2025-11-25 18:55:49 [INFO] 
+--- 要素[0] ---
+2025-11-25 18:55:49 [INFO]   class属性: item_box
+2025-11-25 18:55:49 [INFO]   商品名: IWC
+2025-11-25 18:55:49 [INFO]   価格: 495,000円(内税)
+2025-11-25 18:55:49 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189511717_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:49 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189511717"><img src="https://img17.shop-pro.jp/PA01265/366/product/189511717_th.jpg?cmsp_timestamp=20251125125712" class="item"></a><br>...
+2025-11-25 18:55:49 [INFO] 
+--- 要素[1] ---
+2025-11-25 18:55:49 [INFO]   class属性: item_box
+2025-11-25 18:55:49 [INFO]   商品名: セイコーGS　GMT
+2025-11-25 18:55:49 [INFO]   価格: 396,000円(内税)
+2025-11-25 18:55:49 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189511679_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:49 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189511679"><img src="https://img17.shop-pro.jp/PA01265/366/product/189511679_th.jpg?cmsp_timestamp=20251125125212" class="item"></a><br>...
+2025-11-25 18:55:49 [INFO] 
+--- 要素[2] ---
+2025-11-25 18:55:49 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:49 [INFO]   商品名: ヴァシュロンコンスタンタン
+2025-11-25 18:55:49 [INFO]   価格: 1,760,000円(内税)
+2025-11-25 18:55:49 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189447520_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:49 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189447520"><img src="https://img17.shop-pro.jp/PA01265/366/product/189447520_th.jpg?cmsp_timestamp=20251120160836" class="item"></a><br>...
+2025-11-25 18:55:49 [INFO] 
+--- 要素[3] ---
+2025-11-25 18:55:49 [INFO]   class属性: item_box
+2025-11-25 18:55:49 [INFO]   商品名: ロレックス　チェリーニ
+2025-11-25 18:55:49 [INFO]   価格: 594,000円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189447369_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189447369"><img src="https://img17.shop-pro.jp/PA01265/366/product/189447369_th.jpg?cmsp_timestamp=20251120160004" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[4] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box
+2025-11-25 18:55:50 [INFO]   商品名: (111)
+コンタックスRTS II
+CONTAX RTS II
+2025-11-25 18:55:50 [INFO]   価格: 35,200円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189409911_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189409911"><img src="https://img17.shop-pro.jp/PA01265/366/product/189409911_th.jpg?cmsp_timestamp=20251120091617" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[5] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:50 [INFO]   商品名: (935)
+リコーXR500
+RICOH XR500
+2025-11-25 18:55:50 [INFO]   価格: 7,700円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189409052_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189409052"><img src="https://img17.shop-pro.jp/PA01265/366/product/189409052_th.jpg?cmsp_timestamp=20251120091452" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[6] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box
+2025-11-25 18:55:50 [INFO]   商品名: パテックフィリップ　3445
+2025-11-25 18:55:50 [INFO]   価格: 2,420,000円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189407584_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189407584"><img src="https://img17.shop-pro.jp/PA01265/366/product/189407584_th.jpg?cmsp_timestamp=20251118143003" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[7] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box
+2025-11-25 18:55:50 [INFO]   商品名: (038)
+ニコンF用
+45mmf2.8
+NIKON
+GN AUTO NIKKOR
+2025-11-25 18:55:50 [INFO]   価格: 44,000円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189405050_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189405050"><img src="https://img17.shop-pro.jp/PA01265/366/product/189405050_th.jpg?cmsp_timestamp=20251120090827" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[8] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:50 [INFO]   商品名: (906)
+ニコンF用
+35mmf2.8
+NIKON
+Ai-S NIKKOR
+2025-11-25 18:55:50 [INFO]   価格: 25,300円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189404962_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189404962"><img src="https://img17.shop-pro.jp/PA01265/366/product/189404962_th.jpg?cmsp_timestamp=20251120090552" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[9] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box
+2025-11-25 18:55:50 [INFO]   商品名: (905)
+ニコンF用
+24mmf2.8
+NIKON
+Ai-S NIKKOR
+2025-11-25 18:55:50 [INFO]   価格: 22,000円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189404903_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189404903"><img src="https://img17.shop-pro.jp/PA01265/366/product/189404903_th.jpg?cmsp_timestamp=20251120090508" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[10] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box
+2025-11-25 18:55:50 [INFO]   商品名: (110)
+ローライフレックス2.8D
+ROLLEIFLEX 2.8D
+PLANAR
+2025-11-25 18:55:50 [INFO]   価格: 242,000円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189386595_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189386595"><img src="https://img17.shop-pro.jp/PA01265/366/product/189386595_th.jpg?cmsp_timestamp=20251117101825" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[11] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:50 [INFO]   商品名: (267)
+EXAKTA
+20mmf4.0
+フレクトゴン
+FLEKTGON
+2025-11-25 18:55:50 [INFO]   価格: 39,600円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189386131_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189386131"><img src="https://img17.shop-pro.jp/PA01265/366/product/189386131_th.jpg?cmsp_timestamp=20251117101708" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[12] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box
+2025-11-25 18:55:50 [INFO]   商品名: (943)
+オリンパス ペンFT
+40mmf1.4
+OLYMPUS PEN-FT
+BLACK
+2025-11-25 18:55:50 [INFO]   価格: 77,000円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189385646_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189385646"><img src="https://img17.shop-pro.jp/PA01265/366/product/189385646_th.jpg?cmsp_timestamp=20251117101549" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[13] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box
+2025-11-25 18:55:50 [INFO]   商品名: (335)
+エンサイン220
+ENSIGN 220
+AUTO-RANGE
+ENSAR
+2025-11-25 18:55:50 [INFO]   価格: 28,600円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189385493_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189385493"><img src="https://img17.shop-pro.jp/PA01265/366/product/189385493_th.jpg?cmsp_timestamp=20251117101526" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[14] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:50 [INFO]   商品名: (337)
+コダック
+レチナI
+#010
+KODAK
+RETINA I
+XENAR
+2025-11-25 18:55:50 [INFO]   価格: 8,800円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189385385_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189385385"><img src="https://img17.shop-pro.jp/PA01265/366/product/189385385_th.jpg?cmsp_timestamp=20251117101428" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[15] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box
+2025-11-25 18:55:50 [INFO]   商品名: (313)
+キヤノン7
+No.937666
+CANON 7
+2025-11-25 18:55:50 [INFO]   価格: 17,500円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189385149_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189385149"><img src="https://img17.shop-pro.jp/PA01265/366/product/189385149_th.jpg?cmsp_timestamp=20251117101314" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[16] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box
+2025-11-25 18:55:50 [INFO]   商品名: (655)
+ライカM4
+No.1186088
+LEICA M4
+2025-11-25 18:55:50 [INFO]   価格: 330,000円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189385089_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189385089"><img src="https://img17.shop-pro.jp/PA01265/366/product/189385089_th.jpg?cmsp_timestamp=20251117101219" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[17] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:50 [INFO]   商品名: ポルシェデザイン by IWC
+2025-11-25 18:55:50 [INFO]   価格: 385,000円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189371949_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189371949"><img src="https://img17.shop-pro.jp/PA01265/366/product/189371949_th.jpg?cmsp_timestamp=20251114174050" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[18] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box
+2025-11-25 18:55:50 [INFO]   商品名: IWC
+2025-11-25 18:55:50 [INFO]   価格: 374,000円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189371891_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189371891"><img src="https://img17.shop-pro.jp/PA01265/366/product/189371891_th.jpg?cmsp_timestamp=20251114173503" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[19] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box
+2025-11-25 18:55:50 [INFO]   商品名: ポールブレゲ
+2025-11-25 18:55:50 [INFO]   価格: 66,000円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189371693_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189371693"><img src="https://img17.shop-pro.jp/PA01265/366/product/189371693_th.jpg?cmsp_timestamp=20251114172127" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[20] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:50 [INFO]   商品名: エベラール　クロノグラフ
+2025-11-25 18:55:50 [INFO]   価格: 235,000円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189371317_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189371317"><img src="https://img17.shop-pro.jp/PA01265/366/product/189371317_th.jpg?cmsp_timestamp=20251114170947" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[21] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box
+2025-11-25 18:55:50 [INFO]   商品名: (114)
+ニコンF2
+フォトミックAS
+NIKON F2
+PHOTOMIC AS
+BLACK
+2025-11-25 18:55:50 [INFO]   価格: 88,000円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189289689_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189289689"><img src="https://img17.shop-pro.jp/PA01265/366/product/189289689_th.jpg?cmsp_timestamp=20251109095741" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[22] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box
+2025-11-25 18:55:50 [INFO]   商品名: (141)
+ハッセルブラッド
+PLフィルター
+HASSELBLAD
+POLA FILTER 50
+2025-11-25 18:55:50 [INFO]   価格: 3,300円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189287939_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189287939"><img src="https://img17.shop-pro.jp/PA01265/366/product/189287939_th.jpg?cmsp_timestamp=20251109095529" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[23] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:50 [INFO]   商品名: (143)
+キヤノン
+ファインダー
+35mm
+CANON VIEW FINDER
+2025-11-25 18:55:50 [INFO]   価格: 11,000円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189287652_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189287652"><img src="https://img17.shop-pro.jp/PA01265/366/product/189287652_th.jpg?cmsp_timestamp=20251109095356" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[24] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box
+2025-11-25 18:55:50 [INFO]   商品名: (144)
+オリンパス
+レンズフード
+OLYMPUS
+PEN-F LENS HOOD
+2025-11-25 18:55:50 [INFO]   価格: 3,300円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189287603_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189287603"><img src="https://img17.shop-pro.jp/PA01265/366/product/189287603_th.jpg?cmsp_timestamp=20251109095333" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[25] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box
+2025-11-25 18:55:50 [INFO]   商品名: (146)
+ツァイス
+黄色フィルター
+37mm
+ZEISS
+YELLOW FILTER
+2025-11-25 18:55:50 [INFO]   価格: 3,300円(内税)
+2025-11-25 18:55:50 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189287540_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:50 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189287540"><img src="https://img17.shop-pro.jp/PA01265/366/product/189287540_th.jpg?cmsp_timestamp=20251109095130" class="item"></a><br>...
+2025-11-25 18:55:50 [INFO] 
+--- 要素[26] ---
+2025-11-25 18:55:50 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:50 [INFO]   商品名: (147)
+ローライIII
+ラバーフード
+ROLLEI III
+RUBBER LENS HOOD
+2025-11-25 18:55:50 [INFO]   価格: 3,300円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189287492_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189287492"><img src="https://img17.shop-pro.jp/PA01265/366/product/189287492_th.jpg?cmsp_timestamp=20251109095050" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[27] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: (148)
+ローライIII
+R1.5フィルター
+ROLLEI III
+R1.5 FILTER
+2025-11-25 18:55:51 [INFO]   価格: 3,300円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189287462_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189287462"><img src="https://img17.shop-pro.jp/PA01265/366/product/189287462_th.jpg?cmsp_timestamp=20251109095052" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[28] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: (303)
+トプコン
+58mmf1.8
+RE AUTO TOPCOR
+2025-11-25 18:55:51 [INFO]   価格: 28,600円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189282534_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189282534"><img src="https://img17.shop-pro.jp/PA01265/366/product/189282534_th.jpg?cmsp_timestamp=20251109094854" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[29] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:51 [INFO]   商品名: (622)
+オリンパス
+100mmf2.8
+OLYMPUS
+E. ZUIKO AUTO-T
+2025-11-25 18:55:51 [INFO]   価格: 27,500円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189282422_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189282422"><img src="https://img17.shop-pro.jp/PA01265/366/product/189282422_th.jpg?cmsp_timestamp=20251109094958" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[30] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: (149)
+フォクトレンダー
+VCメーター
+VOIGTLANDER
+VC METER
+2025-11-25 18:55:51 [INFO]   価格: 12,100円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189281671_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189281671"><img src="https://img17.shop-pro.jp/PA01265/366/product/189281671_th.jpg?cmsp_timestamp=20251109094833" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[31] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: (226)
+ロシア製
+ターレットファインダー
+USSR
+TURRET FINDER
+2025-11-25 18:55:51 [INFO]   価格: 11,000円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189280608_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189280608"><img src="https://img17.shop-pro.jp/PA01265/366/product/189280608_th.jpg?cmsp_timestamp=20251109094658" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[32] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:51 [INFO]   商品名: (298)
+ミノルタ
+40mmf2.0
+M-ロッコール
+MINOLTA
+M-ROKKOR
+2025-11-25 18:55:51 [INFO]   価格: 66,000円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189279414_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189279414"><img src="https://img17.shop-pro.jp/PA01265/366/product/189279414_th.jpg?cmsp_timestamp=20251109095810" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[33] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: モバード
+2025-11-25 18:55:51 [INFO]   価格: 121,000円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189266817_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189266817"><img src="https://img17.shop-pro.jp/PA01265/366/product/189266817_th.jpg?cmsp_timestamp=20251106161830" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[34] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: ロンジン　ウィームス
+2025-11-25 18:55:51 [INFO]   価格: 253,000円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189266741_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189266741"><img src="https://img17.shop-pro.jp/PA01265/366/product/189266741_th.jpg?cmsp_timestamp=20251106161252" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[35] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:51 [INFO]   商品名: ブレゲ　ﾄﾗﾝｽｱﾄﾗﾝﾃｨｯｸ
+2025-11-25 18:55:51 [INFO]   価格: 770,000円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189197144_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189197144"><img src="https://img17.shop-pro.jp/PA01265/366/product/189197144_th.jpg?cmsp_timestamp=20251101162305" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[36] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: (152)
+ライカ
+E39 UVa
+LEICA
+FILTER
+2025-11-25 18:55:51 [INFO]   価格: 8,800円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189196057_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189196057"><img src="https://img17.shop-pro.jp/PA01265/366/product/189196057_th.jpg?cmsp_timestamp=20251102090938" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[37] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: (154)
+ライカ
+13132
+E39 UVa
+LEICA
+FILTER
+2025-11-25 18:55:51 [INFO]   価格: 12,100円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189196017_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189196017"><img src="https://img17.shop-pro.jp/PA01265/366/product/189196017_th.jpg?cmsp_timestamp=20251102091023" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[38] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:51 [INFO]   商品名: カルティエ　パシャ　1986
+2025-11-25 18:55:51 [INFO]   価格: 935,000円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189195880_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189195880"><img src="https://img17.shop-pro.jp/PA01265/366/product/189195880_th.jpg?cmsp_timestamp=20251101154056" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[39] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: (132)
+ニコン
+クールピクス L23
+NIKON
+COOLPIX L23
+2025-11-25 18:55:51 [INFO]   価格: 8,800円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189195865_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189195865"><img src="https://img17.shop-pro.jp/PA01265/366/product/189195865_th.jpg?cmsp_timestamp=20251102090720" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[40] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: ヴァシュロンコンスタンタン
+2025-11-25 18:55:51 [INFO]   価格: 935,000円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189195746_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189195746"><img src="https://img17.shop-pro.jp/PA01265/366/product/189195746_th.jpg?cmsp_timestamp=20251101152553" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[41] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:51 [INFO]   商品名: (816)
+オリンパスM-1
+50mmf1.8
+OLYMPUS M-1
+2025-11-25 18:55:51 [INFO]   価格: 48,400円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189195689_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189195689"><img src="https://img17.shop-pro.jp/PA01265/366/product/189195689_th.jpg?cmsp_timestamp=20251102090638" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[42] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: (112)
+京セラ
+コンタックスRX
+CONTAX RX
+2025-11-25 18:55:51 [INFO]   価格: 22,000円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189195595_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189195595"><img src="https://img17.shop-pro.jp/PA01265/366/product/189195595_th.jpg?cmsp_timestamp=20251102090533" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[43] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: (097)
+ライカDIII
+LEICA DIII
+CHROME
+2025-11-25 18:55:51 [INFO]   価格: 74,800円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189195177_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189195177"><img src="https://img17.shop-pro.jp/PA01265/366/product/189195177_th.jpg?cmsp_timestamp=20251102090345" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[44] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:51 [INFO]   商品名: (025)
+ローライQBM
+50mmf1.4
+ROLLEI
+HFT PLANAR
+2025-11-25 18:55:51 [INFO]   価格: 42,900円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189181682_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189181682"><img src="https://img17.shop-pro.jp/PA01265/366/product/189181682_th.jpg?cmsp_timestamp=20251101125421" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[45] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: (032)
+ローライI(B1)
+ローライナーNo.1
+ROLLEI I
+ROLLEINAR No.1
+2025-11-25 18:55:51 [INFO]   価格: 15,400円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189181305_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189181305"><img src="https://img17.shop-pro.jp/PA01265/366/product/189181305_th.jpg?cmsp_timestamp=20251101125117" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[46] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: ヴァシュロンコンスタンタン
+2025-11-25 18:55:51 [INFO]   価格: 682,000円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189131070_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189131070"><img src="https://img17.shop-pro.jp/PA01265/366/product/189131070_th.jpg?cmsp_timestamp=20251027161917" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[47] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:51 [INFO]   商品名: オメガ
+2025-11-25 18:55:51 [INFO]   価格: 385,000円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189123812_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189123812"><img src="https://img17.shop-pro.jp/PA01265/366/product/189123812_th.jpg?cmsp_timestamp=20251027160946" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[48] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: ロンジン リンドバーグ
+2025-11-25 18:55:51 [INFO]   価格: 495,000円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189123435_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189123435"><img src="https://img17.shop-pro.jp/PA01265/366/product/189123435_th.jpg?cmsp_timestamp=20251027122410" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[49] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box
+2025-11-25 18:55:51 [INFO]   商品名: ヴァシュロンコンスタンタン
+2025-11-25 18:55:51 [INFO]   価格: 748,000円(内税)
+2025-11-25 18:55:51 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189123096_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:51 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189123096"><img src="https://img17.shop-pro.jp/PA01265/366/product/189123096_th.jpg?cmsp_timestamp=20251027121809" class="item"></a><br>...
+2025-11-25 18:55:51 [INFO] 
+--- 要素[50] ---
+2025-11-25 18:55:51 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:51 [INFO]   商品名: パテックフィリップ　1450
+2025-11-25 18:55:51 [INFO]   価格: 1,320,000円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189122228_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189122228"><img src="https://img17.shop-pro.jp/PA01265/366/product/189122228_th.jpg?cmsp_timestamp=20251027120456" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[51] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: ロレックス　2940
+2025-11-25 18:55:52 [INFO]   価格: 550,000円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189119888_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189119888"><img src="https://img17.shop-pro.jp/PA01265/366/product/189119888_th.jpg?cmsp_timestamp=20251027113443" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[52] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: セイコー　グランドセイコー
+2025-11-25 18:55:52 [INFO]   価格: 298,000円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189112101_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189112101"><img src="https://img17.shop-pro.jp/PA01265/366/product/189112101_th.jpg?cmsp_timestamp=20251026154823" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[53] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:52 [INFO]   商品名: (817)
+オリンパスOM-1
+50mmf1.4
+OLYMPUS OM-1
+G.ZUIKO AUTO-S
+2025-11-25 18:55:52 [INFO]   価格: 35,200円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189028136_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189028136"><img src="https://img17.shop-pro.jp/PA01265/366/product/189028136_th.jpg?cmsp_timestamp=20251026182449" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[54] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: (037)
+オリンパス
+OLYMPUS
+TOUGH TG830
+2025-11-25 18:55:52 [INFO]   価格: 15,400円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189027812_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189027812"><img src="https://img17.shop-pro.jp/PA01265/366/product/189027812_th.jpg?cmsp_timestamp=20251026182129" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[55] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: (039)
+京セラ
+サムライ Z2
+KYOCERA
+SAMURAI Z2
+2025-11-25 18:55:52 [INFO]   価格: 11,000円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189027716_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189027716"><img src="https://img17.shop-pro.jp/PA01265/366/product/189027716_th.jpg?cmsp_timestamp=20251026182108" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[56] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:52 [INFO]   商品名: (919)
+ライカM
+135mmf4.0
+LEICA
+TELE-ELMAR
+2025-11-25 18:55:52 [INFO]   価格: 38,500円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189027374_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189027374"><img src="https://img17.shop-pro.jp/PA01265/366/product/189027374_th.jpg?cmsp_timestamp=20251026181937" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[57] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: (903)
+フジフィルム
+FUJIFILM
+FINE PIX XP140
+2025-11-25 18:55:52 [INFO]   価格: 26,400円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189019275_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189019275"><img src="https://img17.shop-pro.jp/PA01265/366/product/189019275_th.jpg?cmsp_timestamp=20251026181527" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[58] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: (212)
+M42
+35mmf2.4
+フレクトゴン
+ZEISS FLEKTOGON
+2025-11-25 18:55:52 [INFO]   価格: 58,300円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189018743_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189018743"><img src="https://img17.shop-pro.jp/PA01265/366/product/189018743_th.jpg?cmsp_timestamp=20251026181417" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[59] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:52 [INFO]   商品名: (418)
+M42
+55mmf1.4
+ポルスト
+PORST COLOR REFLEX
+2025-11-25 18:55:52 [INFO]   価格: 33,000円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189018549_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189018549"><img src="https://img17.shop-pro.jp/PA01265/366/product/189018549_th.jpg?cmsp_timestamp=20251026181322" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[60] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: ロレックス　4486
+2025-11-25 18:55:52 [INFO]   価格: 990,000円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189005269_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189005269"><img src="https://img17.shop-pro.jp/PA01265/366/product/189005269_th.jpg?cmsp_timestamp=20251018151758" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[61] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: パテックフィリップ　3544
+2025-11-25 18:55:52 [INFO]   価格: 1,760,000円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188996676_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188996676"><img src="https://img17.shop-pro.jp/PA01265/366/product/188996676_th.jpg?cmsp_timestamp=20251017170707" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[62] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:52 [INFO]   商品名: グレース　ファブリオ
+2025-11-25 18:55:52 [INFO]   価格: 121,000円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188996538_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188996538"><img src="https://img17.shop-pro.jp/PA01265/366/product/188996538_th.jpg?cmsp_timestamp=20251017170020" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[63] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: (243)
+ローライ2眼レフ用(B2)
+フォーカシングノブ
+ROLLEI TLR
+FOCUSING KNOB
+2025-11-25 18:55:52 [INFO]   価格: 5,500円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188941424_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188941424"><img src="https://img17.shop-pro.jp/PA01265/366/product/188941424_th.jpg?cmsp_timestamp=20251017092350" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[64] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: (242)
+ローライII(B2)
+黄色フィルター
+ROLLEI II
+YELLOW FILTER
+2025-11-25 18:55:52 [INFO]   価格: 3,300円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188940309_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188940309"><img src="https://img17.shop-pro.jp/PA01265/366/product/188940309_th.jpg?cmsp_timestamp=20251017092214" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[65] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:52 [INFO]   商品名: (241)
+ローライII(B2)
+UVフィルター
+ROLLEI II
+UV FILTER
+2025-11-25 18:55:52 [INFO]   価格: 2,200円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188940265_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188940265"><img src="https://img17.shop-pro.jp/PA01265/366/product/188940265_th.jpg?cmsp_timestamp=20251017092138" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[66] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: (421)
+ローライII(B2)
+ローライナーNo.1
+ROLLEI II
+ROLLEINAR No.1
+2025-11-25 18:55:52 [INFO]   価格: 19,800円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188939511_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188939511"><img src="https://img17.shop-pro.jp/PA01265/366/product/188939511_th.jpg?cmsp_timestamp=20251017091924" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[67] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: (624)
+ローライ35S
+ROLLEI 35S
+BLACK
+SONNAR
+2025-11-25 18:55:52 [INFO]   価格: 79,200円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188938075_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188938075"><img src="https://img17.shop-pro.jp/PA01265/366/product/188938075_th.jpg?cmsp_timestamp=20251017091919" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[68] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:52 [INFO]   商品名: (307)
+ローライフレックス2.8F
+ROLLEIFLEX 2.8F
+PLANAR
+2025-11-25 18:55:52 [INFO]   価格: 286,000円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188936413_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188936413"><img src="https://img17.shop-pro.jp/PA01265/366/product/188936413_th.jpg?cmsp_timestamp=20251017091822" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[69] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: (422)
+ライカM4
+No.1178223
+LEICA M4
+2025-11-25 18:55:52 [INFO]   価格: 286,000円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188909415_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188909415"><img src="https://img17.shop-pro.jp/PA01265/366/product/188909415_th.jpg?cmsp_timestamp=20251017092842" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[70] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: (211)
+ライカL用
+8.5cmf2.8
+SUPER ROKKOR
+2025-11-25 18:55:52 [INFO]   価格: 38,500円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188908991_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188908991"><img src="https://img17.shop-pro.jp/PA01265/366/product/188908991_th.jpg?cmsp_timestamp=20251017091722" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[71] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:52 [INFO]   商品名: (416)
+ライカM
+50mmf2.0
+LEICA
+SUMMICRON-M
+2025-11-25 18:55:52 [INFO]   価格: 242,000円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188908941_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188908941"><img src="https://img17.shop-pro.jp/PA01265/366/product/188908941_th.jpg?cmsp_timestamp=20251017091619" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[72] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: (871)
+ライカL
+5cmf2.0
+LEICA
+SUMMAR
+2025-11-25 18:55:52 [INFO]   価格: 64,900円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188908891_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188908891"><img src="https://img17.shop-pro.jp/PA01265/366/product/188908891_th.jpg?cmsp_timestamp=20251017091615" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[73] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box
+2025-11-25 18:55:52 [INFO]   商品名: エテルナ　マチック
+2025-11-25 18:55:52 [INFO]   価格: 88,000円(内税)
+2025-11-25 18:55:52 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188902495_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:52 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188902495"><img src="https://img17.shop-pro.jp/PA01265/366/product/188902495_th.jpg?cmsp_timestamp=20251011170525" class="item"></a><br>...
+2025-11-25 18:55:52 [INFO] 
+--- 要素[74] ---
+2025-11-25 18:55:52 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:53 [INFO]   商品名: ゼニス　レスピレーターX
+2025-11-25 18:55:53 [INFO]   価格: 110,000円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188901939_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188901939"><img src="https://img17.shop-pro.jp/PA01265/366/product/188901939_th.jpg?cmsp_timestamp=20251011160854" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[75] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box
+2025-11-25 18:55:53 [INFO]   商品名: ジャンイブ　セクトラ
+2025-11-25 18:55:53 [INFO]   価格: 55,000円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188901824_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188901824"><img src="https://img17.shop-pro.jp/PA01265/366/product/188901824_th.jpg?cmsp_timestamp=20251011155947" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[76] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box
+2025-11-25 18:55:53 [INFO]   商品名: (141)
+ペンタックスSV
+ブラック
+ASAHI
+PENTAX SV
+55mmf1.8
+2025-11-25 18:55:53 [INFO]   価格: 33,000円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188766623_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188766623"><img src="https://img17.shop-pro.jp/PA01265/366/product/188766623_th.jpg?cmsp_timestamp=20251010150303" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[77] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:53 [INFO]   商品名: (651)
+オリンパス ペン W
+25mmf2.8
+OLYMPUS-PEN W
+2025-11-25 18:55:53 [INFO]   価格: 63,800円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188766357_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188766357"><img src="https://img17.shop-pro.jp/PA01265/366/product/188766357_th.jpg?cmsp_timestamp=20251010150244" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[78] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box
+2025-11-25 18:55:53 [INFO]   商品名: (603)
+ニコン ED
+AF ニッコール
+ED AF NIKKOR
+18-35mm 3.5-4.5D
+2025-11-25 18:55:53 [INFO]   価格: 14,300円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188766230_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188766230"><img src="https://img17.shop-pro.jp/PA01265/366/product/188766230_th.jpg?cmsp_timestamp=20251010150114" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[79] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box
+2025-11-25 18:55:53 [INFO]   商品名: (705)
+キヤノン
+CANON
+POWER SHOT
+SX620 HS
+2025-11-25 18:55:53 [INFO]   価格: 36,300円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188766026_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188766026"><img src="https://img17.shop-pro.jp/PA01265/366/product/188766026_th.jpg?cmsp_timestamp=20251010150307" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[80] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:53 [INFO]   商品名: パテックフィリップ　425J
+2025-11-25 18:55:53 [INFO]   価格: 1,650,000円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188754949_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188754949"><img src="https://img17.shop-pro.jp/PA01265/366/product/188754949_th.jpg?cmsp_timestamp=20251005172238" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[81] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box
+2025-11-25 18:55:53 [INFO]   商品名: (949)
+フジカ
+FUJICA
+GS645W
+PROFESSIONAL
+2025-11-25 18:55:53 [INFO]   価格: 154,000円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188753887_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188753887"><img src="https://img17.shop-pro.jp/PA01265/366/product/188753887_th.jpg?cmsp_timestamp=20251010145752" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[82] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box
+2025-11-25 18:55:53 [INFO]   商品名: (031)
+ライカL用
+5cmf1.8
+スーパーロッコール
+MINOLTA
+SUPER ROKKOR
+2025-11-25 18:55:53 [INFO]   価格: 44,000円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188752773_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188752773"><img src="https://img17.shop-pro.jp/PA01265/366/product/188752773_th.jpg?cmsp_timestamp=20251010145620" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[83] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:53 [INFO]   商品名: (629)
+DRズミクロン
+50mmf2.0(M)
+LEICA
+DR SUMMICRON
+2025-11-25 18:55:53 [INFO]   価格: 187,000円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188752726_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188752726"><img src="https://img17.shop-pro.jp/PA01265/366/product/188752726_th.jpg?cmsp_timestamp=20251010145505" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[84] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box
+2025-11-25 18:55:53 [INFO]   商品名: (305)
+ミノルタ CLE
+MINOLTA CLE
+40mmf2
+M-ROKKOR
+2025-11-25 18:55:53 [INFO]   価格: 198,000円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188752398_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188752398"><img src="https://img17.shop-pro.jp/PA01265/366/product/188752398_th.jpg?cmsp_timestamp=20251010145440" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[85] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box
+2025-11-25 18:55:53 [INFO]   商品名: (661)
+ローライフレックス3.5F
+ROLLEIFLEX 3.5F
+XENOTAR
+WF
+2025-11-25 18:55:53 [INFO]   価格: 297,000円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188749856_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188749856"><img src="https://img17.shop-pro.jp/PA01265/366/product/188749856_th.jpg?cmsp_timestamp=20251010145424" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[86] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:53 [INFO]   商品名: (456)
+TAMRON
+SP35mmf1.8
+Di VC USD
+ニコン用
+2025-11-25 18:55:53 [INFO]   価格: 38,500円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188749813_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188749813"><img src="https://img17.shop-pro.jp/PA01265/366/product/188749813_th.jpg?cmsp_timestamp=20251010145323" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[87] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box
+2025-11-25 18:55:53 [INFO]   商品名: (656)
+ニコンF3 HP
+NIKON F3 HP
+2025-11-25 18:55:53 [INFO]   価格: 99,000円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188745010_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188745010"><img src="https://img17.shop-pro.jp/PA01265/366/product/188745010_th.jpg?cmsp_timestamp=20251010145047" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[88] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box
+2025-11-25 18:55:53 [INFO]   商品名: (443)
+オリンパス ペンFT
+40mmf1.4
+OLYMPUS PEN-FT
+BLACK
+2025-11-25 18:55:53 [INFO]   価格: 68,200円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188744934_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188744934"><img src="https://img17.shop-pro.jp/PA01265/366/product/188744934_th.jpg?cmsp_timestamp=20251010145041" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[89] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:53 [INFO]   商品名: セイコー　ワンプッシュクロノ
+2025-11-25 18:55:53 [INFO]   価格: 220,000円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188731341_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188731341"><img src="https://img17.shop-pro.jp/PA01265/366/product/188731341_th.jpg?cmsp_timestamp=20251007133254" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[90] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box
+2025-11-25 18:55:53 [INFO]   商品名: U-BOAT
+2025-11-25 18:55:53 [INFO]   価格: 165,000円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188731239_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188731239"><img src="https://img17.shop-pro.jp/PA01265/366/product/188731239_th.jpg?cmsp_timestamp=20251003121314" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[91] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box
+2025-11-25 18:55:53 [INFO]   商品名: (628)
+ローライQBM
+50mmf1.4
+ROLLEI QBM
+PLANAR
+2025-11-25 18:55:53 [INFO]   価格: 38,500円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188675582_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188675582"><img src="https://img17.shop-pro.jp/PA01265/366/product/188675582_th.jpg?cmsp_timestamp=20250929164123" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[92] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:53 [INFO]   商品名: (712)
+ライカL用
+20mmf5.6
+ルサール
+RUSSAR
+2025-11-25 18:55:53 [INFO]   価格: 68,200円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188675421_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188675421"><img src="https://img17.shop-pro.jp/PA01265/366/product/188675421_th.jpg?cmsp_timestamp=20250929163945" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[93] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box
+2025-11-25 18:55:53 [INFO]   商品名: (691)
+オリンパス OM-1
+OLYMPUS OM-1
+BLACK
+2025-11-25 18:55:53 [INFO]   価格: 17,600円(内税)
+2025-11-25 18:55:53 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188675329_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:53 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188675329"><img src="https://img17.shop-pro.jp/PA01265/366/product/188675329_th.jpg?cmsp_timestamp=20250929163918" class="item"></a><br>...
+2025-11-25 18:55:53 [INFO] 
+--- 要素[94] ---
+2025-11-25 18:55:53 [INFO]   class属性: item_box
+2025-11-25 18:55:53 [INFO]   商品名: (693)
+オリンパス・ペンF用
+25mmf4.0
+OLYMPUS
+E. ZUIKO MC AUTO-W
+2025-11-25 18:55:54 [INFO]   価格: 69,300円(内税)
+2025-11-25 18:55:54 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188675209_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:54 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188675209"><img src="https://img17.shop-pro.jp/PA01265/366/product/188675209_th.jpg?cmsp_timestamp=20250929163814" class="item"></a><br>...
+2025-11-25 18:55:54 [INFO] 
+--- 要素[95] ---
+2025-11-25 18:55:54 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:54 [INFO]   商品名: (694)
+ライカL用
+25mmf4
+VOIGTLANDER
+SNAPSHOT-SKOPAR
+2025-11-25 18:55:54 [INFO]   価格: 48,400円(内税)
+2025-11-25 18:55:54 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188675145_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:54 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188675145"><img src="https://img17.shop-pro.jp/PA01265/366/product/188675145_th.jpg?cmsp_timestamp=20250929163653" class="item"></a><br>...
+2025-11-25 18:55:54 [INFO] 
+--- 要素[96] ---
+2025-11-25 18:55:54 [INFO]   class属性: item_box
+2025-11-25 18:55:54 [INFO]   商品名: (102)
+ローライTRL用(B3)
+ロ―ライフィックス
+ROLLEI TLR
+ROLLEIFIX
+2025-11-25 18:55:54 [INFO]   価格: 11,000円(内税)
+2025-11-25 18:55:54 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188671427_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:54 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188671427"><img src="https://img17.shop-pro.jp/PA01265/366/product/188671427_th.jpg?cmsp_timestamp=20250928182847" class="item"></a><br>...
+2025-11-25 18:55:54 [INFO] 
+--- 要素[97] ---
+2025-11-25 18:55:54 [INFO]   class属性: item_box
+2025-11-25 18:55:54 [INFO]   商品名: (129)
+ローライIII(B3)
+ローライナーNo.2
+ROLLEI III
+ROLLEINAR No.2
+2025-11-25 18:55:54 [INFO]   価格: 18,700円(内税)
+2025-11-25 18:55:54 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188671148_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:54 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188671148"><img src="https://img17.shop-pro.jp/PA01265/366/product/188671148_th.jpg?cmsp_timestamp=20250928182737" class="item"></a><br>...
+2025-11-25 18:55:54 [INFO] 
+--- 要素[98] ---
+2025-11-25 18:55:54 [INFO]   class属性: item_box box_last
+2025-11-25 18:55:54 [INFO]   商品名: (821)
+ローライIII(B3)
+ローライナーNo.2
+ROLLEI III
+ROLLEINAR No.2
+2025-11-25 18:55:54 [INFO]   価格: 8,800円(内税)
+2025-11-25 18:55:54 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188671121_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:54 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188671121"><img src="https://img17.shop-pro.jp/PA01265/366/product/188671121_th.jpg?cmsp_timestamp=20250928182655" class="item"></a><br>...
+2025-11-25 18:55:54 [INFO] 
+--- 要素[99] ---
+2025-11-25 18:55:54 [INFO]   class属性: item_box
+2025-11-25 18:55:54 [INFO]   商品名: (572)
+ライカ
+12586
+LEICA
+LENS HOOD
+50/1.4
+2025-11-25 18:55:54 [INFO]   価格: 16,500円(内税)
+2025-11-25 18:55:54 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188670942_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:55:54 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188670942"><img src="https://img17.shop-pro.jp/PA01265/366/product/188670942_th.jpg?cmsp_timestamp=20250928182528" class="item"></a><br>...
+2025-11-25 18:55:54 [INFO] ================================================================================
+2025-11-25 18:55:54 [INFO] 📦 商品要素数: 100件
+2025-11-25 18:55:54 [INFO]    [1位] IWC... ¥495000
+2025-11-25 18:55:54 [INFO]    [2位] セイコーGS　GMT... ¥396000
+2025-11-25 18:55:54 [INFO]    [3位] ヴァシュロンコンスタンタン... ¥1760000
+2025-11-25 18:55:54 [INFO]    [4位] ロレックス　チェリーニ... ¥594000
+2025-11-25 18:55:54 [INFO]    [5位] (111)
+コンタックスRTS II
+CONTAX RTS II... ¥35200
+2025-11-25 18:55:54 [INFO]    [6位] (935)
+リコーXR500
+RICOH XR500... ¥7700
+2025-11-25 18:55:54 [INFO]    [7位] パテックフィリップ　3445... ¥2420000
+2025-11-25 18:55:54 [INFO]    [8位] (038)
+ニコンF用
+45mmf2.8
+NIKON
+GN AUTO NIKKOR... ¥44000
+2025-11-25 18:55:54 [INFO]    [9位] (906)
+ニコンF用
+35mmf2.8
+NIKON
+Ai-S NIKKOR... ¥25300
+2025-11-25 18:55:54 [INFO]    [10位] (905)
+ニコンF用
+24mmf2.8
+NIKON
+Ai-S NIKKOR... ¥22000
+2025-11-25 18:55:54 [INFO]    [11位] (110)
+ローライフレックス2.8D
+ROLLEIFLEX 2.8D
+PLANAR... ¥242000
+2025-11-25 18:55:54 [INFO]    [12位] (267)
+EXAKTA
+20mmf4.0
+フレクトゴン
+FLEKTGON... ¥39600
+2025-11-25 18:55:54 [INFO]    [13位] (943)
+オリンパス ペンFT
+40mmf1.4
+OLYMPUS PEN-FT
+BLACK... ¥77000
+2025-11-25 18:55:54 [INFO]    [14位] (335)
+エンサイン220
+ENSIGN 220
+AUTO-RANGE
+ENSAR... ¥28600
+2025-11-25 18:55:54 [INFO]    [15位] (337)
+コダック
+レチナI
+#010
+KODAK
+RETINA I
+XENAR... ¥8800
+2025-11-25 18:55:54 [INFO]    [16位] (313)
+キヤノン7
+No.937666
+CANON 7... ¥17500
+2025-11-25 18:55:54 [INFO]    [17位] (655)
+ライカM4
+No.1186088
+LEICA M4... ¥330000
+2025-11-25 18:55:54 [INFO]    [18位] ポルシェデザイン by IWC... ¥385000
+2025-11-25 18:55:54 [INFO]    [19位] IWC... ¥374000
+2025-11-25 18:55:54 [INFO]    [20位] ポールブレゲ... ¥66000
+2025-11-25 18:55:54 [INFO]    [21位] エベラール　クロノグラフ... ¥235000
+2025-11-25 18:55:55 [INFO]    [22位] (114)
+ニコンF2
+フォトミックAS
+NIKON F2
+PHOTOMIC AS
+BLACK... ¥88000
+2025-11-25 18:55:55 [INFO]    [23位] (141)
+ハッセルブラッド
+PLフィルター
+HASSELBLAD
+POLA FILTER 50... ¥3300
+2025-11-25 18:55:55 [INFO]    [24位] (143)
+キヤノン
+ファインダー
+35mm
+CANON VIEW FINDER... ¥11000
+2025-11-25 18:55:55 [INFO]    [25位] (144)
+オリンパス
+レンズフード
+OLYMPUS
+PEN-F LENS HOOD... ¥3300
+2025-11-25 18:55:55 [INFO]    [26位] (146)
+ツァイス
+黄色フィルター
+37mm
+ZEISS
+YELLOW FILTER... ¥3300
+2025-11-25 18:55:55 [INFO]    [27位] (147)
+ローライIII
+ラバーフード
+ROLLEI III
+RUBBER LENS HOOD... ¥3300
+2025-11-25 18:55:55 [INFO]    [28位] (148)
+ローライIII
+R1.5フィルター
+ROLLEI III
+R1.5 FILTER... ¥3300
+2025-11-25 18:55:55 [INFO]    [29位] (303)
+トプコン
+58mmf1.8
+RE AUTO TOPCOR... ¥28600
+2025-11-25 18:55:55 [INFO]    [30位] (622)
+オリンパス
+100mmf2.8
+OLYMPUS
+E. ZUIKO AUTO-T... ¥27500
+2025-11-25 18:55:55 [INFO]    [31位] (149)
+フォクトレンダー
+VCメーター
+VOIGTLANDER
+VC METER... ¥12100
+2025-11-25 18:55:55 [INFO]    [32位] (226)
+ロシア製
+ターレットファインダー
+USSR
+TURRET FINDER... ¥11000
+2025-11-25 18:55:55 [INFO]    [33位] (298)
+ミノルタ
+40mmf2.0
+M-ロッコール
+MINOLTA
+M-ROKKOR... ¥66000
+2025-11-25 18:55:55 [INFO]    [34位] モバード... ¥121000
+2025-11-25 18:55:55 [INFO]    [35位] ロンジン　ウィームス... ¥253000
+2025-11-25 18:55:55 [INFO]    [36位] ブレゲ　ﾄﾗﾝｽｱﾄﾗﾝﾃｨｯｸ... ¥770000
+2025-11-25 18:55:55 [INFO]    [37位] (152)
+ライカ
+E39 UVa
+LEICA
+FILTER... ¥8800
+2025-11-25 18:55:55 [INFO]    [38位] (154)
+ライカ
+13132
+E39 UVa
+LEICA
+FILTER... ¥12100
+2025-11-25 18:55:55 [INFO]    [39位] カルティエ　パシャ　1986... ¥935000
+2025-11-25 18:55:55 [INFO]    [40位] (132)
+ニコン
+クールピクス L23
+NIKON
+COOLPIX L23... ¥8800
+2025-11-25 18:55:55 [INFO]    [41位] ヴァシュロンコンスタンタン... ¥935000
+2025-11-25 18:55:55 [INFO]    [42位] (816)
+オリンパスM-1
+50mmf1.8
+OLYMPUS M-1... ¥48400
+2025-11-25 18:55:55 [INFO]    [43位] (112)
+京セラ
+コンタックスRX
+CONTAX RX... ¥22000
+2025-11-25 18:55:55 [INFO]    [44位] (097)
+ライカDIII
+LEICA DIII
+CHROME... ¥74800
+2025-11-25 18:55:55 [INFO]    [45位] (025)
+ローライQBM
+50mmf1.4
+ROLLEI
+HFT PLANAR... ¥42900
+2025-11-25 18:55:55 [INFO]    [46位] (032)
+ローライI(B1)
+ローライナーNo.1
+ROLLEI I
+ROLLEINAR No.1... ¥15400
+2025-11-25 18:55:55 [INFO]    [47位] ヴァシュロンコンスタンタン... ¥682000
+2025-11-25 18:55:55 [INFO]    [48位] オメガ... ¥385000
+2025-11-25 18:55:55 [INFO]    [49位] ロンジン リンドバーグ... ¥495000
+2025-11-25 18:55:55 [INFO]    [50位] ヴァシュロンコンスタンタン... ¥748000
+2025-11-25 18:55:55 [INFO]    [51位] パテックフィリップ　1450... ¥1320000
+2025-11-25 18:55:55 [INFO]    [52位] ロレックス　2940... ¥550000
+2025-11-25 18:55:56 [INFO]    [53位] セイコー　グランドセイコー... ¥298000
+2025-11-25 18:55:56 [INFO]    [54位] (817)
+オリンパスOM-1
+50mmf1.4
+OLYMPUS OM-1
+G.ZUIKO AUTO-S... ¥35200
+2025-11-25 18:55:56 [INFO]    [55位] (037)
+オリンパス
+OLYMPUS
+TOUGH TG830... ¥15400
+2025-11-25 18:55:56 [INFO]    [56位] (039)
+京セラ
+サムライ Z2
+KYOCERA
+SAMURAI Z2... ¥11000
+2025-11-25 18:55:56 [INFO]    [57位] (919)
+ライカM
+135mmf4.0
+LEICA
+TELE-ELMAR... ¥38500
+2025-11-25 18:55:56 [INFO]    [58位] (903)
+フジフィルム
+FUJIFILM
+FINE PIX XP140... ¥26400
+2025-11-25 18:55:56 [INFO]    [59位] (212)
+M42
+35mmf2.4
+フレクトゴン
+ZEISS FLEKTOGON... ¥58300
+2025-11-25 18:55:56 [INFO]    [60位] (418)
+M42
+55mmf1.4
+ポルスト
+PORST COLOR REFLEX... ¥33000
+2025-11-25 18:55:56 [INFO]    [61位] ロレックス　4486... ¥990000
+2025-11-25 18:55:56 [INFO]    [62位] パテックフィリップ　3544... ¥1760000
+2025-11-25 18:55:56 [INFO]    [63位] グレース　ファブリオ... ¥121000
+2025-11-25 18:55:56 [INFO]    [64位] (243)
+ローライ2眼レフ用(B2)
+フォーカシングノブ
+ROLLEI TLR
+FOCUSING KNOB... ¥5500
+2025-11-25 18:55:56 [INFO]    [65位] (242)
+ローライII(B2)
+黄色フィルター
+ROLLEI II
+YELLOW FILTER... ¥3300
+2025-11-25 18:55:56 [INFO]    [66位] (241)
+ローライII(B2)
+UVフィルター
+ROLLEI II
+UV FILTER... ¥2200
+2025-11-25 18:55:56 [INFO]    [67位] (421)
+ローライII(B2)
+ローライナーNo.1
+ROLLEI II
+ROLLEINAR No.1... ¥19800
+2025-11-25 18:55:56 [INFO]    [68位] (624)
+ローライ35S
+ROLLEI 35S
+BLACK
+SONNAR... ¥79200
+2025-11-25 18:55:56 [INFO]    [69位] (307)
+ローライフレックス2.8F
+ROLLEIFLEX 2.8F
+PLANAR... ¥286000
+2025-11-25 18:55:56 [INFO]    [70位] (422)
+ライカM4
+No.1178223
+LEICA M4... ¥286000
+2025-11-25 18:55:56 [INFO]    [71位] (211)
+ライカL用
+8.5cmf2.8
+SUPER ROKKOR... ¥38500
+2025-11-25 18:55:56 [INFO]    [72位] (416)
+ライカM
+50mmf2.0
+LEICA
+SUMMICRON-M... ¥242000
+2025-11-25 18:55:56 [INFO]    [73位] (871)
+ライカL
+5cmf2.0
+LEICA
+SUMMAR... ¥64900
+2025-11-25 18:55:56 [INFO]    [74位] エテルナ　マチック... ¥88000
+2025-11-25 18:55:56 [INFO]    [75位] ゼニス　レスピレーターX... ¥110000
+2025-11-25 18:55:56 [INFO]    [76位] ジャンイブ　セクトラ... ¥55000
+2025-11-25 18:55:56 [INFO]    [77位] (141)
+ペンタックスSV
+ブラック
+ASAHI
+PENTAX SV
+55mmf1.8... ¥33000
+2025-11-25 18:55:56 [INFO]    [78位] (651)
+オリンパス ペン W
+25mmf2.8
+OLYMPUS-PEN W... ¥63800
+2025-11-25 18:55:56 [INFO]    [79位] (603)
+ニコン ED
+AF ニッコール
+ED AF NIKKOR
+18-35mm 3.5-4.5D... ¥14300
+2025-11-25 18:55:56 [INFO]    [80位] (705)
+キヤノン
+CANON
+POWER SHOT
+SX620 HS... ¥36300
+2025-11-25 18:55:56 [INFO]    [81位] パテックフィリップ　425J... ¥1650000
+2025-11-25 18:55:56 [INFO]    [82位] (949)
+フジカ
+FUJICA
+GS645W
+PROFESSIONAL... ¥154000
+2025-11-25 18:55:56 [INFO]    [83位] (031)
+ライカL用
+5cmf1.8
+スーパーロッコール
+MINOLTA
+SUPER ROKKOR... ¥44000
+2025-11-25 18:55:56 [INFO]    [84位] (629)
+DRズミクロン
+50mmf2.0(M)
+LEICA
+DR SUMMICRON... ¥187000
+2025-11-25 18:55:56 [INFO]    [85位] (305)
+ミノルタ CLE
+MINOLTA CLE
+40mmf2
+M-ROKKOR... ¥198000
+2025-11-25 18:55:56 [INFO]    [86位] (661)
+ローライフレックス3.5F
+ROLLEIFLEX 3.5F
+XENOTAR
+WF... ¥297000
+2025-11-25 18:55:57 [INFO]    [87位] (456)
+TAMRON
+SP35mmf1.8
+Di VC USD
+ニコン用... ¥38500
+2025-11-25 18:55:57 [INFO]    [88位] (656)
+ニコンF3 HP
+NIKON F3 HP... ¥99000
+2025-11-25 18:55:57 [INFO]    [89位] (443)
+オリンパス ペンFT
+40mmf1.4
+OLYMPUS PEN-FT
+BLACK... ¥68200
+2025-11-25 18:55:57 [INFO]    [90位] セイコー　ワンプッシュクロノ... ¥220000
+2025-11-25 18:55:57 [INFO]    [91位] U-BOAT... ¥165000
+2025-11-25 18:55:57 [INFO]    [92位] (628)
+ローライQBM
+50mmf1.4
+ROLLEI QBM
+PLANAR... ¥38500
+2025-11-25 18:55:57 [INFO]    [93位] (712)
+ライカL用
+20mmf5.6
+ルサール
+RUSSAR... ¥68200
+2025-11-25 18:55:57 [INFO]    [94位] (691)
+オリンパス OM-1
+OLYMPUS OM-1
+BLACK... ¥17600
+2025-11-25 18:55:57 [INFO]    [95位] (693)
+オリンパス・ペンF用
+25mmf4.0
+OLYMPUS
+E. ZUIKO MC AUTO-W... ¥69300
+2025-11-25 18:55:57 [INFO]    [96位] (694)
+ライカL用
+25mmf4
+VOIGTLANDER
+SNAPSHOT-SKOPAR... ¥48400
+2025-11-25 18:55:57 [INFO]    [97位] (102)
+ローライTRL用(B3)
+ロ―ライフィックス
+ROLLEI TLR
+ROLLEIFIX... ¥11000
+2025-11-25 18:55:57 [INFO]    [98位] (129)
+ローライIII(B3)
+ローライナーNo.2
+ROLLEI III
+ROLLEINAR No.2... ¥18700
+2025-11-25 18:55:57 [INFO]    [99位] (821)
+ローライIII(B3)
+ローライナーNo.2
+ROLLEI III
+ROLLEINAR No.2... ¥8800
+2025-11-25 18:55:57 [INFO]    [100位] (572)
+ライカ
+12586
+LEICA
+LENS HOOD
+50/1.4... ¥16500
+2025-11-25 18:55:57 [INFO] ✅ スクレイピング成功: 100件
+2025-11-25 18:55:57 [INFO]    取得: 100件
+2025-11-25 18:55:57 [INFO] ⏰ 次のチェックまで5秒待機...
+2025-11-25 18:56:02 [INFO] 
+🔍 チェック 2/2
+2025-11-25 18:56:02 [INFO] 🌐 Playwrightブラウザ起動中...
+2025-11-25 18:56:02 [DEBUG] Using selector: EpollSelector
+2025-11-25 18:56:03 [INFO] 🌐 ページ読み込み中... https://kikuya-camera.shop-pro.jp/?mode=srh&cid=&keyword=&sort=n
+2025-11-25 18:56:04 [INFO] ⏳ 商品リスト表示待機中...
+2025-11-25 18:56:04 [INFO] ⏳ JavaScript並び替え待機中...
+2025-11-25 18:56:06 [INFO] ⏳ DOM安定化確認中...
+2025-11-25 18:56:07 [INFO]    ✓ 安定: 1/3回 (商品数=100件, 1位=IWC...)
+2025-11-25 18:56:08 [INFO]    ✓ 安定: 2/3回 (商品数=100件, 1位=IWC...)
+2025-11-25 18:56:09 [INFO]    ✓ 安定: 3/3回 (商品数=100件, 1位=IWC...)
+2025-11-25 18:56:09 [INFO] ✅ DOM安定化確認完了: チェック=4回
+2025-11-25 18:56:09 [INFO] ================================================================================
+2025-11-25 18:56:09 [INFO] 🔍 デバッグ: 全.item_box要素の構造ダンプ
+2025-11-25 18:56:09 [INFO] ================================================================================
+2025-11-25 18:56:09 [INFO] 検出された.item_box要素数: 100件
+2025-11-25 18:56:09 [INFO] 
+--- 要素[0] ---
+2025-11-25 18:56:09 [INFO]   class属性: item_box
+2025-11-25 18:56:09 [INFO]   商品名: IWC
+2025-11-25 18:56:09 [INFO]   価格: 495,000円(内税)
+2025-11-25 18:56:09 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189511717_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:09 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189511717"><img src="https://img17.shop-pro.jp/PA01265/366/product/189511717_th.jpg?cmsp_timestamp=20251125125712" class="item"></a><br>...
+2025-11-25 18:56:09 [INFO] 
+--- 要素[1] ---
+2025-11-25 18:56:09 [INFO]   class属性: item_box
+2025-11-25 18:56:09 [INFO]   商品名: セイコーGS　GMT
+2025-11-25 18:56:09 [INFO]   価格: 396,000円(内税)
+2025-11-25 18:56:09 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189511679_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:09 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189511679"><img src="https://img17.shop-pro.jp/PA01265/366/product/189511679_th.jpg?cmsp_timestamp=20251125125212" class="item"></a><br>...
+2025-11-25 18:56:09 [INFO] 
+--- 要素[2] ---
+2025-11-25 18:56:09 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:09 [INFO]   商品名: ヴァシュロンコンスタンタン
+2025-11-25 18:56:09 [INFO]   価格: 1,760,000円(内税)
+2025-11-25 18:56:09 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189447520_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:09 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189447520"><img src="https://img17.shop-pro.jp/PA01265/366/product/189447520_th.jpg?cmsp_timestamp=20251120160836" class="item"></a><br>...
+2025-11-25 18:56:09 [INFO] 
+--- 要素[3] ---
+2025-11-25 18:56:09 [INFO]   class属性: item_box
+2025-11-25 18:56:09 [INFO]   商品名: ロレックス　チェリーニ
+2025-11-25 18:56:09 [INFO]   価格: 594,000円(内税)
+2025-11-25 18:56:09 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189447369_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:09 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189447369"><img src="https://img17.shop-pro.jp/PA01265/366/product/189447369_th.jpg?cmsp_timestamp=20251120160004" class="item"></a><br>...
+2025-11-25 18:56:09 [INFO] 
+--- 要素[4] ---
+2025-11-25 18:56:09 [INFO]   class属性: item_box
+2025-11-25 18:56:09 [INFO]   商品名: (111)
+コンタックスRTS II
+CONTAX RTS II
+2025-11-25 18:56:09 [INFO]   価格: 35,200円(内税)
+2025-11-25 18:56:09 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189409911_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:09 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189409911"><img src="https://img17.shop-pro.jp/PA01265/366/product/189409911_th.jpg?cmsp_timestamp=20251120091617" class="item"></a><br>...
+2025-11-25 18:56:09 [INFO] 
+--- 要素[5] ---
+2025-11-25 18:56:09 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:09 [INFO]   商品名: (935)
+リコーXR500
+RICOH XR500
+2025-11-25 18:56:09 [INFO]   価格: 7,700円(内税)
+2025-11-25 18:56:09 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189409052_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:09 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189409052"><img src="https://img17.shop-pro.jp/PA01265/366/product/189409052_th.jpg?cmsp_timestamp=20251120091452" class="item"></a><br>...
+2025-11-25 18:56:09 [INFO] 
+--- 要素[6] ---
+2025-11-25 18:56:09 [INFO]   class属性: item_box
+2025-11-25 18:56:09 [INFO]   商品名: パテックフィリップ　3445
+2025-11-25 18:56:09 [INFO]   価格: 2,420,000円(内税)
+2025-11-25 18:56:09 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189407584_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:09 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189407584"><img src="https://img17.shop-pro.jp/PA01265/366/product/189407584_th.jpg?cmsp_timestamp=20251118143003" class="item"></a><br>...
+2025-11-25 18:56:09 [INFO] 
+--- 要素[7] ---
+2025-11-25 18:56:09 [INFO]   class属性: item_box
+2025-11-25 18:56:09 [INFO]   商品名: (038)
+ニコンF用
+45mmf2.8
+NIKON
+GN AUTO NIKKOR
+2025-11-25 18:56:09 [INFO]   価格: 44,000円(内税)
+2025-11-25 18:56:09 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189405050_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:09 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189405050"><img src="https://img17.shop-pro.jp/PA01265/366/product/189405050_th.jpg?cmsp_timestamp=20251120090827" class="item"></a><br>...
+2025-11-25 18:56:09 [INFO] 
+--- 要素[8] ---
+2025-11-25 18:56:09 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:09 [INFO]   商品名: (906)
+ニコンF用
+35mmf2.8
+NIKON
+Ai-S NIKKOR
+2025-11-25 18:56:09 [INFO]   価格: 25,300円(内税)
+2025-11-25 18:56:09 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189404962_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:09 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189404962"><img src="https://img17.shop-pro.jp/PA01265/366/product/189404962_th.jpg?cmsp_timestamp=20251120090552" class="item"></a><br>...
+2025-11-25 18:56:09 [INFO] 
+--- 要素[9] ---
+2025-11-25 18:56:09 [INFO]   class属性: item_box
+2025-11-25 18:56:09 [INFO]   商品名: (905)
+ニコンF用
+24mmf2.8
+NIKON
+Ai-S NIKKOR
+2025-11-25 18:56:09 [INFO]   価格: 22,000円(内税)
+2025-11-25 18:56:09 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189404903_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:09 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189404903"><img src="https://img17.shop-pro.jp/PA01265/366/product/189404903_th.jpg?cmsp_timestamp=20251120090508" class="item"></a><br>...
+2025-11-25 18:56:09 [INFO] 
+--- 要素[10] ---
+2025-11-25 18:56:10 [INFO]   class属性: item_box
+2025-11-25 18:56:10 [INFO]   商品名: (110)
+ローライフレックス2.8D
+ROLLEIFLEX 2.8D
+PLANAR
+2025-11-25 18:56:10 [INFO]   価格: 242,000円(内税)
+2025-11-25 18:56:10 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189386595_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:10 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189386595"><img src="https://img17.shop-pro.jp/PA01265/366/product/189386595_th.jpg?cmsp_timestamp=20251117101825" class="item"></a><br>...
+2025-11-25 18:56:10 [INFO] 
+--- 要素[11] ---
+2025-11-25 18:56:10 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:10 [INFO]   商品名: (267)
+EXAKTA
+20mmf4.0
+フレクトゴン
+FLEKTGON
+2025-11-25 18:56:10 [INFO]   価格: 39,600円(内税)
+2025-11-25 18:56:10 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189386131_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:10 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189386131"><img src="https://img17.shop-pro.jp/PA01265/366/product/189386131_th.jpg?cmsp_timestamp=20251117101708" class="item"></a><br>...
+2025-11-25 18:56:10 [INFO] 
+--- 要素[12] ---
+2025-11-25 18:56:10 [INFO]   class属性: item_box
+2025-11-25 18:56:10 [INFO]   商品名: (943)
+オリンパス ペンFT
+40mmf1.4
+OLYMPUS PEN-FT
+BLACK
+2025-11-25 18:56:10 [INFO]   価格: 77,000円(内税)
+2025-11-25 18:56:10 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189385646_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:10 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189385646"><img src="https://img17.shop-pro.jp/PA01265/366/product/189385646_th.jpg?cmsp_timestamp=20251117101549" class="item"></a><br>...
+2025-11-25 18:56:10 [INFO] 
+--- 要素[13] ---
+2025-11-25 18:56:10 [INFO]   class属性: item_box
+2025-11-25 18:56:10 [INFO]   商品名: (335)
+エンサイン220
+ENSIGN 220
+AUTO-RANGE
+ENSAR
+2025-11-25 18:56:10 [INFO]   価格: 28,600円(内税)
+2025-11-25 18:56:10 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189385493_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:10 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189385493"><img src="https://img17.shop-pro.jp/PA01265/366/product/189385493_th.jpg?cmsp_timestamp=20251117101526" class="item"></a><br>...
+2025-11-25 18:56:10 [INFO] 
+--- 要素[14] ---
+2025-11-25 18:56:10 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:10 [INFO]   商品名: (337)
+コダック
+レチナI
+#010
+KODAK
+RETINA I
+XENAR
+2025-11-25 18:56:10 [INFO]   価格: 8,800円(内税)
+2025-11-25 18:56:10 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189385385_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:10 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189385385"><img src="https://img17.shop-pro.jp/PA01265/366/product/189385385_th.jpg?cmsp_timestamp=20251117101428" class="item"></a><br>...
+2025-11-25 18:56:10 [INFO] 
+--- 要素[15] ---
+2025-11-25 18:56:10 [INFO]   class属性: item_box
+2025-11-25 18:56:10 [INFO]   商品名: (313)
+キヤノン7
+No.937666
+CANON 7
+2025-11-25 18:56:10 [INFO]   価格: 17,500円(内税)
+2025-11-25 18:56:10 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189385149_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:10 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189385149"><img src="https://img17.shop-pro.jp/PA01265/366/product/189385149_th.jpg?cmsp_timestamp=20251117101314" class="item"></a><br>...
+2025-11-25 18:56:10 [INFO] 
+--- 要素[16] ---
+2025-11-25 18:56:10 [INFO]   class属性: item_box
+2025-11-25 18:56:10 [INFO]   商品名: (655)
+ライカM4
+No.1186088
+LEICA M4
+2025-11-25 18:56:10 [INFO]   価格: 330,000円(内税)
+2025-11-25 18:56:10 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189385089_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:10 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189385089"><img src="https://img17.shop-pro.jp/PA01265/366/product/189385089_th.jpg?cmsp_timestamp=20251117101219" class="item"></a><br>...
+2025-11-25 18:56:10 [INFO] 
+--- 要素[17] ---
+2025-11-25 18:56:10 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:10 [INFO]   商品名: ポルシェデザイン by IWC
+2025-11-25 18:56:10 [INFO]   価格: 385,000円(内税)
+2025-11-25 18:56:10 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189371949_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:10 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189371949"><img src="https://img17.shop-pro.jp/PA01265/366/product/189371949_th.jpg?cmsp_timestamp=20251114174050" class="item"></a><br>...
+2025-11-25 18:56:10 [INFO] 
+--- 要素[18] ---
+2025-11-25 18:56:10 [INFO]   class属性: item_box
+2025-11-25 18:56:10 [INFO]   商品名: IWC
+2025-11-25 18:56:10 [INFO]   価格: 374,000円(内税)
+2025-11-25 18:56:10 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189371891_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:10 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189371891"><img src="https://img17.shop-pro.jp/PA01265/366/product/189371891_th.jpg?cmsp_timestamp=20251114173503" class="item"></a><br>...
+2025-11-25 18:56:10 [INFO] 
+--- 要素[19] ---
+2025-11-25 18:56:10 [INFO]   class属性: item_box
+2025-11-25 18:56:10 [INFO]   商品名: ポールブレゲ
+2025-11-25 18:56:10 [INFO]   価格: 66,000円(内税)
+2025-11-25 18:56:10 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189371693_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:10 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189371693"><img src="https://img17.shop-pro.jp/PA01265/366/product/189371693_th.jpg?cmsp_timestamp=20251114172127" class="item"></a><br>...
+2025-11-25 18:56:10 [INFO] 
+--- 要素[20] ---
+2025-11-25 18:56:10 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:10 [INFO]   商品名: エベラール　クロノグラフ
+2025-11-25 18:56:10 [INFO]   価格: 235,000円(内税)
+2025-11-25 18:56:10 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189371317_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:10 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189371317"><img src="https://img17.shop-pro.jp/PA01265/366/product/189371317_th.jpg?cmsp_timestamp=20251114170947" class="item"></a><br>...
+2025-11-25 18:56:10 [INFO] 
+--- 要素[21] ---
+2025-11-25 18:56:10 [INFO]   class属性: item_box
+2025-11-25 18:56:10 [INFO]   商品名: (114)
+ニコンF2
+フォトミックAS
+NIKON F2
+PHOTOMIC AS
+BLACK
+2025-11-25 18:56:10 [INFO]   価格: 88,000円(内税)
+2025-11-25 18:56:10 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189289689_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:10 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189289689"><img src="https://img17.shop-pro.jp/PA01265/366/product/189289689_th.jpg?cmsp_timestamp=20251109095741" class="item"></a><br>...
+2025-11-25 18:56:10 [INFO] 
+--- 要素[22] ---
+2025-11-25 18:56:10 [INFO]   class属性: item_box
+2025-11-25 18:56:10 [INFO]   商品名: (141)
+ハッセルブラッド
+PLフィルター
+HASSELBLAD
+POLA FILTER 50
+2025-11-25 18:56:10 [INFO]   価格: 3,300円(内税)
+2025-11-25 18:56:10 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189287939_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189287939"><img src="https://img17.shop-pro.jp/PA01265/366/product/189287939_th.jpg?cmsp_timestamp=20251109095529" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[23] ---
+2025-11-25 18:56:11 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:11 [INFO]   商品名: (143)
+キヤノン
+ファインダー
+35mm
+CANON VIEW FINDER
+2025-11-25 18:56:11 [INFO]   価格: 11,000円(内税)
+2025-11-25 18:56:11 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189287652_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189287652"><img src="https://img17.shop-pro.jp/PA01265/366/product/189287652_th.jpg?cmsp_timestamp=20251109095356" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[24] ---
+2025-11-25 18:56:11 [INFO]   class属性: item_box
+2025-11-25 18:56:11 [INFO]   商品名: (144)
+オリンパス
+レンズフード
+OLYMPUS
+PEN-F LENS HOOD
+2025-11-25 18:56:11 [INFO]   価格: 3,300円(内税)
+2025-11-25 18:56:11 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189287603_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189287603"><img src="https://img17.shop-pro.jp/PA01265/366/product/189287603_th.jpg?cmsp_timestamp=20251109095333" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[25] ---
+2025-11-25 18:56:11 [INFO]   class属性: item_box
+2025-11-25 18:56:11 [INFO]   商品名: (146)
+ツァイス
+黄色フィルター
+37mm
+ZEISS
+YELLOW FILTER
+2025-11-25 18:56:11 [INFO]   価格: 3,300円(内税)
+2025-11-25 18:56:11 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189287540_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189287540"><img src="https://img17.shop-pro.jp/PA01265/366/product/189287540_th.jpg?cmsp_timestamp=20251109095130" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[26] ---
+2025-11-25 18:56:11 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:11 [INFO]   商品名: (147)
+ローライIII
+ラバーフード
+ROLLEI III
+RUBBER LENS HOOD
+2025-11-25 18:56:11 [INFO]   価格: 3,300円(内税)
+2025-11-25 18:56:11 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189287492_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189287492"><img src="https://img17.shop-pro.jp/PA01265/366/product/189287492_th.jpg?cmsp_timestamp=20251109095050" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[27] ---
+2025-11-25 18:56:11 [INFO]   class属性: item_box
+2025-11-25 18:56:11 [INFO]   商品名: (148)
+ローライIII
+R1.5フィルター
+ROLLEI III
+R1.5 FILTER
+2025-11-25 18:56:11 [INFO]   価格: 3,300円(内税)
+2025-11-25 18:56:11 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189287462_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189287462"><img src="https://img17.shop-pro.jp/PA01265/366/product/189287462_th.jpg?cmsp_timestamp=20251109095052" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[28] ---
+2025-11-25 18:56:11 [INFO]   class属性: item_box
+2025-11-25 18:56:11 [INFO]   商品名: (303)
+トプコン
+58mmf1.8
+RE AUTO TOPCOR
+2025-11-25 18:56:11 [INFO]   価格: 28,600円(内税)
+2025-11-25 18:56:11 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189282534_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189282534"><img src="https://img17.shop-pro.jp/PA01265/366/product/189282534_th.jpg?cmsp_timestamp=20251109094854" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[29] ---
+2025-11-25 18:56:11 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:11 [INFO]   商品名: (622)
+オリンパス
+100mmf2.8
+OLYMPUS
+E. ZUIKO AUTO-T
+2025-11-25 18:56:11 [INFO]   価格: 27,500円(内税)
+2025-11-25 18:56:11 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189282422_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189282422"><img src="https://img17.shop-pro.jp/PA01265/366/product/189282422_th.jpg?cmsp_timestamp=20251109094958" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[30] ---
+2025-11-25 18:56:11 [INFO]   class属性: item_box
+2025-11-25 18:56:11 [INFO]   商品名: (149)
+フォクトレンダー
+VCメーター
+VOIGTLANDER
+VC METER
+2025-11-25 18:56:11 [INFO]   価格: 12,100円(内税)
+2025-11-25 18:56:11 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189281671_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189281671"><img src="https://img17.shop-pro.jp/PA01265/366/product/189281671_th.jpg?cmsp_timestamp=20251109094833" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[31] ---
+2025-11-25 18:56:11 [INFO]   class属性: item_box
+2025-11-25 18:56:11 [INFO]   商品名: (226)
+ロシア製
+ターレットファインダー
+USSR
+TURRET FINDER
+2025-11-25 18:56:11 [INFO]   価格: 11,000円(内税)
+2025-11-25 18:56:11 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189280608_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189280608"><img src="https://img17.shop-pro.jp/PA01265/366/product/189280608_th.jpg?cmsp_timestamp=20251109094658" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[32] ---
+2025-11-25 18:56:11 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:11 [INFO]   商品名: (298)
+ミノルタ
+40mmf2.0
+M-ロッコール
+MINOLTA
+M-ROKKOR
+2025-11-25 18:56:11 [INFO]   価格: 66,000円(内税)
+2025-11-25 18:56:11 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189279414_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189279414"><img src="https://img17.shop-pro.jp/PA01265/366/product/189279414_th.jpg?cmsp_timestamp=20251109095810" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[33] ---
+2025-11-25 18:56:11 [INFO]   class属性: item_box
+2025-11-25 18:56:11 [INFO]   商品名: モバード
+2025-11-25 18:56:11 [INFO]   価格: 121,000円(内税)
+2025-11-25 18:56:11 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189266817_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189266817"><img src="https://img17.shop-pro.jp/PA01265/366/product/189266817_th.jpg?cmsp_timestamp=20251106161830" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[34] ---
+2025-11-25 18:56:11 [INFO]   class属性: item_box
+2025-11-25 18:56:11 [INFO]   商品名: ロンジン　ウィームス
+2025-11-25 18:56:11 [INFO]   価格: 253,000円(内税)
+2025-11-25 18:56:11 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189266741_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189266741"><img src="https://img17.shop-pro.jp/PA01265/366/product/189266741_th.jpg?cmsp_timestamp=20251106161252" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[35] ---
+2025-11-25 18:56:11 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:11 [INFO]   商品名: ブレゲ　ﾄﾗﾝｽｱﾄﾗﾝﾃｨｯｸ
+2025-11-25 18:56:11 [INFO]   価格: 770,000円(内税)
+2025-11-25 18:56:11 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189197144_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189197144"><img src="https://img17.shop-pro.jp/PA01265/366/product/189197144_th.jpg?cmsp_timestamp=20251101162305" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[36] ---
+2025-11-25 18:56:11 [INFO]   class属性: item_box
+2025-11-25 18:56:11 [INFO]   商品名: (152)
+ライカ
+E39 UVa
+LEICA
+FILTER
+2025-11-25 18:56:11 [INFO]   価格: 8,800円(内税)
+2025-11-25 18:56:11 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189196057_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189196057"><img src="https://img17.shop-pro.jp/PA01265/366/product/189196057_th.jpg?cmsp_timestamp=20251102090938" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[37] ---
+2025-11-25 18:56:11 [INFO]   class属性: item_box
+2025-11-25 18:56:11 [INFO]   商品名: (154)
+ライカ
+13132
+E39 UVa
+LEICA
+FILTER
+2025-11-25 18:56:11 [INFO]   価格: 12,100円(内税)
+2025-11-25 18:56:11 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189196017_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:11 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189196017"><img src="https://img17.shop-pro.jp/PA01265/366/product/189196017_th.jpg?cmsp_timestamp=20251102091023" class="item"></a><br>...
+2025-11-25 18:56:11 [INFO] 
+--- 要素[38] ---
+2025-11-25 18:56:12 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:12 [INFO]   商品名: カルティエ　パシャ　1986
+2025-11-25 18:56:12 [INFO]   価格: 935,000円(内税)
+2025-11-25 18:56:12 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189195880_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:12 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189195880"><img src="https://img17.shop-pro.jp/PA01265/366/product/189195880_th.jpg?cmsp_timestamp=20251101154056" class="item"></a><br>...
+2025-11-25 18:56:12 [INFO] 
+--- 要素[39] ---
+2025-11-25 18:56:12 [INFO]   class属性: item_box
+2025-11-25 18:56:12 [INFO]   商品名: (132)
+ニコン
+クールピクス L23
+NIKON
+COOLPIX L23
+2025-11-25 18:56:12 [INFO]   価格: 8,800円(内税)
+2025-11-25 18:56:12 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189195865_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:12 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189195865"><img src="https://img17.shop-pro.jp/PA01265/366/product/189195865_th.jpg?cmsp_timestamp=20251102090720" class="item"></a><br>...
+2025-11-25 18:56:12 [INFO] 
+--- 要素[40] ---
+2025-11-25 18:56:12 [INFO]   class属性: item_box
+2025-11-25 18:56:12 [INFO]   商品名: ヴァシュロンコンスタンタン
+2025-11-25 18:56:12 [INFO]   価格: 935,000円(内税)
+2025-11-25 18:56:12 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189195746_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:12 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189195746"><img src="https://img17.shop-pro.jp/PA01265/366/product/189195746_th.jpg?cmsp_timestamp=20251101152553" class="item"></a><br>...
+2025-11-25 18:56:12 [INFO] 
+--- 要素[41] ---
+2025-11-25 18:56:12 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:12 [INFO]   商品名: (816)
+オリンパスM-1
+50mmf1.8
+OLYMPUS M-1
+2025-11-25 18:56:12 [INFO]   価格: 48,400円(内税)
+2025-11-25 18:56:12 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189195689_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:12 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189195689"><img src="https://img17.shop-pro.jp/PA01265/366/product/189195689_th.jpg?cmsp_timestamp=20251102090638" class="item"></a><br>...
+2025-11-25 18:56:12 [INFO] 
+--- 要素[42] ---
+2025-11-25 18:56:12 [INFO]   class属性: item_box
+2025-11-25 18:56:12 [INFO]   商品名: (112)
+京セラ
+コンタックスRX
+CONTAX RX
+2025-11-25 18:56:12 [INFO]   価格: 22,000円(内税)
+2025-11-25 18:56:12 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189195595_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:12 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189195595"><img src="https://img17.shop-pro.jp/PA01265/366/product/189195595_th.jpg?cmsp_timestamp=20251102090533" class="item"></a><br>...
+2025-11-25 18:56:12 [INFO] 
+--- 要素[43] ---
+2025-11-25 18:56:12 [INFO]   class属性: item_box
+2025-11-25 18:56:12 [INFO]   商品名: (097)
+ライカDIII
+LEICA DIII
+CHROME
+2025-11-25 18:56:12 [INFO]   価格: 74,800円(内税)
+2025-11-25 18:56:12 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189195177_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:12 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189195177"><img src="https://img17.shop-pro.jp/PA01265/366/product/189195177_th.jpg?cmsp_timestamp=20251102090345" class="item"></a><br>...
+2025-11-25 18:56:12 [INFO] 
+--- 要素[44] ---
+2025-11-25 18:56:12 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:12 [INFO]   商品名: (025)
+ローライQBM
+50mmf1.4
+ROLLEI
+HFT PLANAR
+2025-11-25 18:56:12 [INFO]   価格: 42,900円(内税)
+2025-11-25 18:56:12 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189181682_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:12 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189181682"><img src="https://img17.shop-pro.jp/PA01265/366/product/189181682_th.jpg?cmsp_timestamp=20251101125421" class="item"></a><br>...
+2025-11-25 18:56:12 [INFO] 
+--- 要素[45] ---
+2025-11-25 18:56:12 [INFO]   class属性: item_box
+2025-11-25 18:56:12 [INFO]   商品名: (032)
+ローライI(B1)
+ローライナーNo.1
+ROLLEI I
+ROLLEINAR No.1
+2025-11-25 18:56:12 [INFO]   価格: 15,400円(内税)
+2025-11-25 18:56:12 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189181305_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:12 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189181305"><img src="https://img17.shop-pro.jp/PA01265/366/product/189181305_th.jpg?cmsp_timestamp=20251101125117" class="item"></a><br>...
+2025-11-25 18:56:12 [INFO] 
+--- 要素[46] ---
+2025-11-25 18:56:12 [INFO]   class属性: item_box
+2025-11-25 18:56:12 [INFO]   商品名: ヴァシュロンコンスタンタン
+2025-11-25 18:56:12 [INFO]   価格: 682,000円(内税)
+2025-11-25 18:56:12 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189131070_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:12 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189131070"><img src="https://img17.shop-pro.jp/PA01265/366/product/189131070_th.jpg?cmsp_timestamp=20251027161917" class="item"></a><br>...
+2025-11-25 18:56:12 [INFO] 
+--- 要素[47] ---
+2025-11-25 18:56:12 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:12 [INFO]   商品名: オメガ
+2025-11-25 18:56:12 [INFO]   価格: 385,000円(内税)
+2025-11-25 18:56:12 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189123812_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:12 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189123812"><img src="https://img17.shop-pro.jp/PA01265/366/product/189123812_th.jpg?cmsp_timestamp=20251027160946" class="item"></a><br>...
+2025-11-25 18:56:12 [INFO] 
+--- 要素[48] ---
+2025-11-25 18:56:12 [INFO]   class属性: item_box
+2025-11-25 18:56:12 [INFO]   商品名: ロンジン リンドバーグ
+2025-11-25 18:56:12 [INFO]   価格: 495,000円(内税)
+2025-11-25 18:56:12 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189123435_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:12 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189123435"><img src="https://img17.shop-pro.jp/PA01265/366/product/189123435_th.jpg?cmsp_timestamp=20251027122410" class="item"></a><br>...
+2025-11-25 18:56:12 [INFO] 
+--- 要素[49] ---
+2025-11-25 18:56:12 [INFO]   class属性: item_box
+2025-11-25 18:56:12 [INFO]   商品名: ヴァシュロンコンスタンタン
+2025-11-25 18:56:12 [INFO]   価格: 748,000円(内税)
+2025-11-25 18:56:12 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189123096_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:12 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189123096"><img src="https://img17.shop-pro.jp/PA01265/366/product/189123096_th.jpg?cmsp_timestamp=20251027121809" class="item"></a><br>...
+2025-11-25 18:56:12 [INFO] 
+--- 要素[50] ---
+2025-11-25 18:56:12 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:12 [INFO]   商品名: パテックフィリップ　1450
+2025-11-25 18:56:12 [INFO]   価格: 1,320,000円(内税)
+2025-11-25 18:56:12 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189122228_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:12 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189122228"><img src="https://img17.shop-pro.jp/PA01265/366/product/189122228_th.jpg?cmsp_timestamp=20251027120456" class="item"></a><br>...
+2025-11-25 18:56:12 [INFO] 
+--- 要素[51] ---
+2025-11-25 18:56:12 [INFO]   class属性: item_box
+2025-11-25 18:56:12 [INFO]   商品名: ロレックス　2940
+2025-11-25 18:56:12 [INFO]   価格: 550,000円(内税)
+2025-11-25 18:56:12 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189119888_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:12 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189119888"><img src="https://img17.shop-pro.jp/PA01265/366/product/189119888_th.jpg?cmsp_timestamp=20251027113443" class="item"></a><br>...
+2025-11-25 18:56:12 [INFO] 
+--- 要素[52] ---
+2025-11-25 18:56:12 [INFO]   class属性: item_box
+2025-11-25 18:56:13 [INFO]   商品名: セイコー　グランドセイコー
+2025-11-25 18:56:13 [INFO]   価格: 298,000円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189112101_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189112101"><img src="https://img17.shop-pro.jp/PA01265/366/product/189112101_th.jpg?cmsp_timestamp=20251026154823" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[53] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:13 [INFO]   商品名: (817)
+オリンパスOM-1
+50mmf1.4
+OLYMPUS OM-1
+G.ZUIKO AUTO-S
+2025-11-25 18:56:13 [INFO]   価格: 35,200円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189028136_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189028136"><img src="https://img17.shop-pro.jp/PA01265/366/product/189028136_th.jpg?cmsp_timestamp=20251026182449" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[54] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box
+2025-11-25 18:56:13 [INFO]   商品名: (037)
+オリンパス
+OLYMPUS
+TOUGH TG830
+2025-11-25 18:56:13 [INFO]   価格: 15,400円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189027812_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189027812"><img src="https://img17.shop-pro.jp/PA01265/366/product/189027812_th.jpg?cmsp_timestamp=20251026182129" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[55] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box
+2025-11-25 18:56:13 [INFO]   商品名: (039)
+京セラ
+サムライ Z2
+KYOCERA
+SAMURAI Z2
+2025-11-25 18:56:13 [INFO]   価格: 11,000円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189027716_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189027716"><img src="https://img17.shop-pro.jp/PA01265/366/product/189027716_th.jpg?cmsp_timestamp=20251026182108" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[56] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:13 [INFO]   商品名: (919)
+ライカM
+135mmf4.0
+LEICA
+TELE-ELMAR
+2025-11-25 18:56:13 [INFO]   価格: 38,500円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189027374_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189027374"><img src="https://img17.shop-pro.jp/PA01265/366/product/189027374_th.jpg?cmsp_timestamp=20251026181937" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[57] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box
+2025-11-25 18:56:13 [INFO]   商品名: (903)
+フジフィルム
+FUJIFILM
+FINE PIX XP140
+2025-11-25 18:56:13 [INFO]   価格: 26,400円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189019275_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189019275"><img src="https://img17.shop-pro.jp/PA01265/366/product/189019275_th.jpg?cmsp_timestamp=20251026181527" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[58] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box
+2025-11-25 18:56:13 [INFO]   商品名: (212)
+M42
+35mmf2.4
+フレクトゴン
+ZEISS FLEKTOGON
+2025-11-25 18:56:13 [INFO]   価格: 58,300円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189018743_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189018743"><img src="https://img17.shop-pro.jp/PA01265/366/product/189018743_th.jpg?cmsp_timestamp=20251026181417" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[59] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:13 [INFO]   商品名: (418)
+M42
+55mmf1.4
+ポルスト
+PORST COLOR REFLEX
+2025-11-25 18:56:13 [INFO]   価格: 33,000円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189018549_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189018549"><img src="https://img17.shop-pro.jp/PA01265/366/product/189018549_th.jpg?cmsp_timestamp=20251026181322" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[60] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box
+2025-11-25 18:56:13 [INFO]   商品名: ロレックス　4486
+2025-11-25 18:56:13 [INFO]   価格: 990,000円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/189005269_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=189005269"><img src="https://img17.shop-pro.jp/PA01265/366/product/189005269_th.jpg?cmsp_timestamp=20251018151758" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[61] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box
+2025-11-25 18:56:13 [INFO]   商品名: パテックフィリップ　3544
+2025-11-25 18:56:13 [INFO]   価格: 1,760,000円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188996676_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188996676"><img src="https://img17.shop-pro.jp/PA01265/366/product/188996676_th.jpg?cmsp_timestamp=20251017170707" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[62] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:13 [INFO]   商品名: グレース　ファブリオ
+2025-11-25 18:56:13 [INFO]   価格: 121,000円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188996538_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188996538"><img src="https://img17.shop-pro.jp/PA01265/366/product/188996538_th.jpg?cmsp_timestamp=20251017170020" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[63] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box
+2025-11-25 18:56:13 [INFO]   商品名: (243)
+ローライ2眼レフ用(B2)
+フォーカシングノブ
+ROLLEI TLR
+FOCUSING KNOB
+2025-11-25 18:56:13 [INFO]   価格: 5,500円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188941424_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188941424"><img src="https://img17.shop-pro.jp/PA01265/366/product/188941424_th.jpg?cmsp_timestamp=20251017092350" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[64] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box
+2025-11-25 18:56:13 [INFO]   商品名: (242)
+ローライII(B2)
+黄色フィルター
+ROLLEI II
+YELLOW FILTER
+2025-11-25 18:56:13 [INFO]   価格: 3,300円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188940309_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188940309"><img src="https://img17.shop-pro.jp/PA01265/366/product/188940309_th.jpg?cmsp_timestamp=20251017092214" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[65] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:13 [INFO]   商品名: (241)
+ローライII(B2)
+UVフィルター
+ROLLEI II
+UV FILTER
+2025-11-25 18:56:13 [INFO]   価格: 2,200円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188940265_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188940265"><img src="https://img17.shop-pro.jp/PA01265/366/product/188940265_th.jpg?cmsp_timestamp=20251017092138" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[66] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box
+2025-11-25 18:56:13 [INFO]   商品名: (421)
+ローライII(B2)
+ローライナーNo.1
+ROLLEI II
+ROLLEINAR No.1
+2025-11-25 18:56:13 [INFO]   価格: 19,800円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188939511_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188939511"><img src="https://img17.shop-pro.jp/PA01265/366/product/188939511_th.jpg?cmsp_timestamp=20251017091924" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[67] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box
+2025-11-25 18:56:13 [INFO]   商品名: (624)
+ローライ35S
+ROLLEI 35S
+BLACK
+SONNAR
+2025-11-25 18:56:13 [INFO]   価格: 79,200円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188938075_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188938075"><img src="https://img17.shop-pro.jp/PA01265/366/product/188938075_th.jpg?cmsp_timestamp=20251017091919" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[68] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:13 [INFO]   商品名: (307)
+ローライフレックス2.8F
+ROLLEIFLEX 2.8F
+PLANAR
+2025-11-25 18:56:13 [INFO]   価格: 286,000円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188936413_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188936413"><img src="https://img17.shop-pro.jp/PA01265/366/product/188936413_th.jpg?cmsp_timestamp=20251017091822" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[69] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box
+2025-11-25 18:56:13 [INFO]   商品名: (422)
+ライカM4
+No.1178223
+LEICA M4
+2025-11-25 18:56:13 [INFO]   価格: 286,000円(内税)
+2025-11-25 18:56:13 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188909415_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:13 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188909415"><img src="https://img17.shop-pro.jp/PA01265/366/product/188909415_th.jpg?cmsp_timestamp=20251017092842" class="item"></a><br>...
+2025-11-25 18:56:13 [INFO] 
+--- 要素[70] ---
+2025-11-25 18:56:13 [INFO]   class属性: item_box
+2025-11-25 18:56:13 [INFO]   商品名: (211)
+ライカL用
+8.5cmf2.8
+SUPER ROKKOR
+2025-11-25 18:56:14 [INFO]   価格: 38,500円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188908991_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188908991"><img src="https://img17.shop-pro.jp/PA01265/366/product/188908991_th.jpg?cmsp_timestamp=20251017091722" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[71] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:14 [INFO]   商品名: (416)
+ライカM
+50mmf2.0
+LEICA
+SUMMICRON-M
+2025-11-25 18:56:14 [INFO]   価格: 242,000円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188908941_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188908941"><img src="https://img17.shop-pro.jp/PA01265/366/product/188908941_th.jpg?cmsp_timestamp=20251017091619" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[72] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box
+2025-11-25 18:56:14 [INFO]   商品名: (871)
+ライカL
+5cmf2.0
+LEICA
+SUMMAR
+2025-11-25 18:56:14 [INFO]   価格: 64,900円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188908891_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188908891"><img src="https://img17.shop-pro.jp/PA01265/366/product/188908891_th.jpg?cmsp_timestamp=20251017091615" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[73] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box
+2025-11-25 18:56:14 [INFO]   商品名: エテルナ　マチック
+2025-11-25 18:56:14 [INFO]   価格: 88,000円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188902495_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188902495"><img src="https://img17.shop-pro.jp/PA01265/366/product/188902495_th.jpg?cmsp_timestamp=20251011170525" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[74] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:14 [INFO]   商品名: ゼニス　レスピレーターX
+2025-11-25 18:56:14 [INFO]   価格: 110,000円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188901939_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188901939"><img src="https://img17.shop-pro.jp/PA01265/366/product/188901939_th.jpg?cmsp_timestamp=20251011160854" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[75] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box
+2025-11-25 18:56:14 [INFO]   商品名: ジャンイブ　セクトラ
+2025-11-25 18:56:14 [INFO]   価格: 55,000円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188901824_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188901824"><img src="https://img17.shop-pro.jp/PA01265/366/product/188901824_th.jpg?cmsp_timestamp=20251011155947" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[76] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box
+2025-11-25 18:56:14 [INFO]   商品名: (141)
+ペンタックスSV
+ブラック
+ASAHI
+PENTAX SV
+55mmf1.8
+2025-11-25 18:56:14 [INFO]   価格: 33,000円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188766623_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188766623"><img src="https://img17.shop-pro.jp/PA01265/366/product/188766623_th.jpg?cmsp_timestamp=20251010150303" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[77] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:14 [INFO]   商品名: (651)
+オリンパス ペン W
+25mmf2.8
+OLYMPUS-PEN W
+2025-11-25 18:56:14 [INFO]   価格: 63,800円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188766357_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188766357"><img src="https://img17.shop-pro.jp/PA01265/366/product/188766357_th.jpg?cmsp_timestamp=20251010150244" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[78] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box
+2025-11-25 18:56:14 [INFO]   商品名: (603)
+ニコン ED
+AF ニッコール
+ED AF NIKKOR
+18-35mm 3.5-4.5D
+2025-11-25 18:56:14 [INFO]   価格: 14,300円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188766230_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188766230"><img src="https://img17.shop-pro.jp/PA01265/366/product/188766230_th.jpg?cmsp_timestamp=20251010150114" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[79] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box
+2025-11-25 18:56:14 [INFO]   商品名: (705)
+キヤノン
+CANON
+POWER SHOT
+SX620 HS
+2025-11-25 18:56:14 [INFO]   価格: 36,300円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188766026_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188766026"><img src="https://img17.shop-pro.jp/PA01265/366/product/188766026_th.jpg?cmsp_timestamp=20251010150307" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[80] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:14 [INFO]   商品名: パテックフィリップ　425J
+2025-11-25 18:56:14 [INFO]   価格: 1,650,000円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188754949_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188754949"><img src="https://img17.shop-pro.jp/PA01265/366/product/188754949_th.jpg?cmsp_timestamp=20251005172238" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[81] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box
+2025-11-25 18:56:14 [INFO]   商品名: (949)
+フジカ
+FUJICA
+GS645W
+PROFESSIONAL
+2025-11-25 18:56:14 [INFO]   価格: 154,000円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188753887_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188753887"><img src="https://img17.shop-pro.jp/PA01265/366/product/188753887_th.jpg?cmsp_timestamp=20251010145752" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[82] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box
+2025-11-25 18:56:14 [INFO]   商品名: (031)
+ライカL用
+5cmf1.8
+スーパーロッコール
+MINOLTA
+SUPER ROKKOR
+2025-11-25 18:56:14 [INFO]   価格: 44,000円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188752773_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188752773"><img src="https://img17.shop-pro.jp/PA01265/366/product/188752773_th.jpg?cmsp_timestamp=20251010145620" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[83] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:14 [INFO]   商品名: (629)
+DRズミクロン
+50mmf2.0(M)
+LEICA
+DR SUMMICRON
+2025-11-25 18:56:14 [INFO]   価格: 187,000円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188752726_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188752726"><img src="https://img17.shop-pro.jp/PA01265/366/product/188752726_th.jpg?cmsp_timestamp=20251010145505" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[84] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box
+2025-11-25 18:56:14 [INFO]   商品名: (305)
+ミノルタ CLE
+MINOLTA CLE
+40mmf2
+M-ROKKOR
+2025-11-25 18:56:14 [INFO]   価格: 198,000円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188752398_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188752398"><img src="https://img17.shop-pro.jp/PA01265/366/product/188752398_th.jpg?cmsp_timestamp=20251010145440" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[85] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box
+2025-11-25 18:56:14 [INFO]   商品名: (661)
+ローライフレックス3.5F
+ROLLEIFLEX 3.5F
+XENOTAR
+WF
+2025-11-25 18:56:14 [INFO]   価格: 297,000円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188749856_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188749856"><img src="https://img17.shop-pro.jp/PA01265/366/product/188749856_th.jpg?cmsp_timestamp=20251010145424" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[86] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:14 [INFO]   商品名: (456)
+TAMRON
+SP35mmf1.8
+Di VC USD
+ニコン用
+2025-11-25 18:56:14 [INFO]   価格: 38,500円(内税)
+2025-11-25 18:56:14 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188749813_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:14 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188749813"><img src="https://img17.shop-pro.jp/PA01265/366/product/188749813_th.jpg?cmsp_timestamp=20251010145323" class="item"></a><br>...
+2025-11-25 18:56:14 [INFO] 
+--- 要素[87] ---
+2025-11-25 18:56:14 [INFO]   class属性: item_box
+2025-11-25 18:56:14 [INFO]   商品名: (656)
+ニコンF3 HP
+NIKON F3 HP
+2025-11-25 18:56:15 [INFO]   価格: 99,000円(内税)
+2025-11-25 18:56:15 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188745010_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:15 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188745010"><img src="https://img17.shop-pro.jp/PA01265/366/product/188745010_th.jpg?cmsp_timestamp=20251010145047" class="item"></a><br>...
+2025-11-25 18:56:15 [INFO] 
+--- 要素[88] ---
+2025-11-25 18:56:15 [INFO]   class属性: item_box
+2025-11-25 18:56:15 [INFO]   商品名: (443)
+オリンパス ペンFT
+40mmf1.4
+OLYMPUS PEN-FT
+BLACK
+2025-11-25 18:56:15 [INFO]   価格: 68,200円(内税)
+2025-11-25 18:56:15 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188744934_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:15 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188744934"><img src="https://img17.shop-pro.jp/PA01265/366/product/188744934_th.jpg?cmsp_timestamp=20251010145041" class="item"></a><br>...
+2025-11-25 18:56:15 [INFO] 
+--- 要素[89] ---
+2025-11-25 18:56:15 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:15 [INFO]   商品名: セイコー　ワンプッシュクロノ
+2025-11-25 18:56:15 [INFO]   価格: 220,000円(内税)
+2025-11-25 18:56:15 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188731341_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:15 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188731341"><img src="https://img17.shop-pro.jp/PA01265/366/product/188731341_th.jpg?cmsp_timestamp=20251007133254" class="item"></a><br>...
+2025-11-25 18:56:15 [INFO] 
+--- 要素[90] ---
+2025-11-25 18:56:15 [INFO]   class属性: item_box
+2025-11-25 18:56:15 [INFO]   商品名: U-BOAT
+2025-11-25 18:56:15 [INFO]   価格: 165,000円(内税)
+2025-11-25 18:56:15 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188731239_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:15 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188731239"><img src="https://img17.shop-pro.jp/PA01265/366/product/188731239_th.jpg?cmsp_timestamp=20251003121314" class="item"></a><br>...
+2025-11-25 18:56:15 [INFO] 
+--- 要素[91] ---
+2025-11-25 18:56:15 [INFO]   class属性: item_box
+2025-11-25 18:56:15 [INFO]   商品名: (628)
+ローライQBM
+50mmf1.4
+ROLLEI QBM
+PLANAR
+2025-11-25 18:56:15 [INFO]   価格: 38,500円(内税)
+2025-11-25 18:56:15 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188675582_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:15 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188675582"><img src="https://img17.shop-pro.jp/PA01265/366/product/188675582_th.jpg?cmsp_timestamp=20250929164123" class="item"></a><br>...
+2025-11-25 18:56:15 [INFO] 
+--- 要素[92] ---
+2025-11-25 18:56:15 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:15 [INFO]   商品名: (712)
+ライカL用
+20mmf5.6
+ルサール
+RUSSAR
+2025-11-25 18:56:15 [INFO]   価格: 68,200円(内税)
+2025-11-25 18:56:15 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188675421_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:15 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188675421"><img src="https://img17.shop-pro.jp/PA01265/366/product/188675421_th.jpg?cmsp_timestamp=20250929163945" class="item"></a><br>...
+2025-11-25 18:56:15 [INFO] 
+--- 要素[93] ---
+2025-11-25 18:56:15 [INFO]   class属性: item_box
+2025-11-25 18:56:15 [INFO]   商品名: (691)
+オリンパス OM-1
+OLYMPUS OM-1
+BLACK
+2025-11-25 18:56:15 [INFO]   価格: 17,600円(内税)
+2025-11-25 18:56:15 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188675329_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:15 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188675329"><img src="https://img17.shop-pro.jp/PA01265/366/product/188675329_th.jpg?cmsp_timestamp=20250929163918" class="item"></a><br>...
+2025-11-25 18:56:15 [INFO] 
+--- 要素[94] ---
+2025-11-25 18:56:15 [INFO]   class属性: item_box
+2025-11-25 18:56:15 [INFO]   商品名: (693)
+オリンパス・ペンF用
+25mmf4.0
+OLYMPUS
+E. ZUIKO MC AUTO-W
+2025-11-25 18:56:15 [INFO]   価格: 69,300円(内税)
+2025-11-25 18:56:15 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188675209_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:15 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188675209"><img src="https://img17.shop-pro.jp/PA01265/366/product/188675209_th.jpg?cmsp_timestamp=20250929163814" class="item"></a><br>...
+2025-11-25 18:56:15 [INFO] 
+--- 要素[95] ---
+2025-11-25 18:56:15 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:15 [INFO]   商品名: (694)
+ライカL用
+25mmf4
+VOIGTLANDER
+SNAPSHOT-SKOPAR
+2025-11-25 18:56:15 [INFO]   価格: 48,400円(内税)
+2025-11-25 18:56:15 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188675145_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:15 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188675145"><img src="https://img17.shop-pro.jp/PA01265/366/product/188675145_th.jpg?cmsp_timestamp=20250929163653" class="item"></a><br>...
+2025-11-25 18:56:15 [INFO] 
+--- 要素[96] ---
+2025-11-25 18:56:15 [INFO]   class属性: item_box
+2025-11-25 18:56:15 [INFO]   商品名: (102)
+ローライTRL用(B3)
+ロ―ライフィックス
+ROLLEI TLR
+ROLLEIFIX
+2025-11-25 18:56:15 [INFO]   価格: 11,000円(内税)
+2025-11-25 18:56:15 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188671427_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:15 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188671427"><img src="https://img17.shop-pro.jp/PA01265/366/product/188671427_th.jpg?cmsp_timestamp=20250928182847" class="item"></a><br>...
+2025-11-25 18:56:15 [INFO] 
+--- 要素[97] ---
+2025-11-25 18:56:15 [INFO]   class属性: item_box
+2025-11-25 18:56:15 [INFO]   商品名: (129)
+ローライIII(B3)
+ローライナーNo.2
+ROLLEI III
+ROLLEINAR No.2
+2025-11-25 18:56:15 [INFO]   価格: 18,700円(内税)
+2025-11-25 18:56:15 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188671148_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:15 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188671148"><img src="https://img17.shop-pro.jp/PA01265/366/product/188671148_th.jpg?cmsp_timestamp=20250928182737" class="item"></a><br>...
+2025-11-25 18:56:15 [INFO] 
+--- 要素[98] ---
+2025-11-25 18:56:15 [INFO]   class属性: item_box box_last
+2025-11-25 18:56:15 [INFO]   商品名: (821)
+ローライIII(B3)
+ローライナーNo.2
+ROLLEI III
+ROLLEINAR No.2
+2025-11-25 18:56:15 [INFO]   価格: 8,800円(内税)
+2025-11-25 18:56:16 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188671121_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:16 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188671121"><img src="https://img17.shop-pro.jp/PA01265/366/product/188671121_th.jpg?cmsp_timestamp=20250928182655" class="item"></a><br>...
+2025-11-25 18:56:16 [INFO] 
+--- 要素[99] ---
+2025-11-25 18:56:16 [INFO]   class属性: item_box
+2025-11-25 18:56:16 [INFO]   商品名: (572)
+ライカ
+12586
+LEICA
+LENS HOOD
+50/1.4
+2025-11-25 18:56:16 [INFO]   価格: 16,500円(内税)
+2025-11-25 18:56:16 [INFO]   画像URL: https://img17.shop-pro.jp/PA01265/366/product/188670942_th.jpg?cmsp_timestamp=20...
+2025-11-25 18:56:16 [DEBUG]   HTML抜粋:
+
+      <div class="item_image">
+                  <a href="?pid=188670942"><img src="https://img17.shop-pro.jp/PA01265/366/product/188670942_th.jpg?cmsp_timestamp=20250928182528" class="item"></a><br>...
+2025-11-25 18:56:16 [INFO] ================================================================================
+2025-11-25 18:56:16 [INFO] 📦 商品要素数: 100件
+2025-11-25 18:56:16 [INFO]    [1位] IWC... ¥495000
+2025-11-25 18:56:16 [INFO]    [2位] セイコーGS　GMT... ¥396000
+2025-11-25 18:56:16 [INFO]    [3位] ヴァシュロンコンスタンタン... ¥1760000
+2025-11-25 18:56:16 [INFO]    [4位] ロレックス　チェリーニ... ¥594000
+2025-11-25 18:56:16 [INFO]    [5位] (111)
+コンタックスRTS II
+CONTAX RTS II... ¥35200
+2025-11-25 18:56:16 [INFO]    [6位] (935)
+リコーXR500
+RICOH XR500... ¥7700
+2025-11-25 18:56:16 [INFO]    [7位] パテックフィリップ　3445... ¥2420000
+2025-11-25 18:56:16 [INFO]    [8位] (038)
+ニコンF用
+45mmf2.8
+NIKON
+GN AUTO NIKKOR... ¥44000
+2025-11-25 18:56:17 [INFO]    [9位] (906)
+ニコンF用
+35mmf2.8
+NIKON
+Ai-S NIKKOR... ¥25300
+2025-11-25 18:56:17 [INFO]    [10位] (905)
+ニコンF用
+24mmf2.8
+NIKON
+Ai-S NIKKOR... ¥22000
+2025-11-25 18:56:17 [INFO]    [11位] (110)
+ローライフレックス2.8D
+ROLLEIFLEX 2.8D
+PLANAR... ¥242000
+2025-11-25 18:56:17 [INFO]    [12位] (267)
+EXAKTA
+20mmf4.0
+フレクトゴン
+FLEKTGON... ¥39600
+2025-11-25 18:56:17 [INFO]    [13位] (943)
+オリンパス ペンFT
+40mmf1.4
+OLYMPUS PEN-FT
+BLACK... ¥77000
+2025-11-25 18:56:17 [INFO]    [14位] (335)
+エンサイン220
+ENSIGN 220
+AUTO-RANGE
+ENSAR... ¥28600
+2025-11-25 18:56:17 [INFO]    [15位] (337)
+コダック
+レチナI
+#010
+KODAK
+RETINA I
+XENAR... ¥8800
+2025-11-25 18:56:17 [INFO]    [16位] (313)
+キヤノン7
+No.937666
+CANON 7... ¥17500
+2025-11-25 18:56:17 [INFO]    [17位] (655)
+ライカM4
+No.1186088
+LEICA M4... ¥330000
+2025-11-25 18:56:17 [INFO]    [18位] ポルシェデザイン by IWC... ¥385000
+2025-11-25 18:56:18 [INFO]    [19位] IWC... ¥374000
+2025-11-25 18:56:18 [INFO]    [20位] ポールブレゲ... ¥66000
+2025-11-25 18:56:18 [INFO]    [21位] エベラール　クロノグラフ... ¥235000
+2025-11-25 18:56:18 [INFO]    [22位] (114)
+ニコンF2
+フォトミックAS
+NIKON F2
+PHOTOMIC AS
+BLACK... ¥88000
+2025-11-25 18:56:18 [INFO]    [23位] (141)
+ハッセルブラッド
+PLフィルター
+HASSELBLAD
+POLA FILTER 50... ¥3300
+2025-11-25 18:56:18 [INFO]    [24位] (143)
+キヤノン
+ファインダー
+35mm
+CANON VIEW FINDER... ¥11000
+2025-11-25 18:56:18 [INFO]    [25位] (144)
+オリンパス
+レンズフード
+OLYMPUS
+PEN-F LENS HOOD... ¥3300
+2025-11-25 18:56:18 [INFO]    [26位] (146)
+ツァイス
+黄色フィルター
+37mm
+ZEISS
+YELLOW FILTER... ¥3300
+2025-11-25 18:56:18 [INFO]    [27位] (147)
+ローライIII
+ラバーフード
+ROLLEI III
+RUBBER LENS HOOD... ¥3300
+2025-11-25 18:56:18 [INFO]    [28位] (148)
+ローライIII
+R1.5フィルター
+ROLLEI III
+R1.5 FILTER... ¥3300
+2025-11-25 18:56:18 [INFO]    [29位] (303)
+トプコン
+58mmf1.8
+RE AUTO TOPCOR... ¥28600
+2025-11-25 18:56:19 [INFO]    [30位] (622)
+オリンパス
+100mmf2.8
+OLYMPUS
+E. ZUIKO AUTO-T... ¥27500
+2025-11-25 18:56:19 [INFO]    [31位] (149)
+フォクトレンダー
+VCメーター
+VOIGTLANDER
+VC METER... ¥12100
+2025-11-25 18:56:19 [INFO]    [32位] (226)
+ロシア製
+ターレットファインダー
+USSR
+TURRET FINDER... ¥11000
+2025-11-25 18:56:19 [INFO]    [33位] (298)
+ミノルタ
+40mmf2.0
+M-ロッコール
+MINOLTA
+M-ROKKOR... ¥66000
+2025-11-25 18:56:19 [INFO]    [34位] モバード... ¥121000
+2025-11-25 18:56:19 [INFO]    [35位] ロンジン　ウィームス... ¥253000
+2025-11-25 18:56:19 [INFO]    [36位] ブレゲ　ﾄﾗﾝｽｱﾄﾗﾝﾃｨｯｸ... ¥770000
+2025-11-25 18:56:19 [INFO]    [37位] (152)
+ライカ
+E39 UVa
+LEICA
+FILTER... ¥8800
+2025-11-25 18:56:19 [INFO]    [38位] (154)
+ライカ
+13132
+E39 UVa
+LEICA
+FILTER... ¥12100
+2025-11-25 18:56:20 [INFO]    [39位] カルティエ　パシャ　1986... ¥935000
+2025-11-25 18:56:20 [INFO]    [40位] (132)
+ニコン
+クールピクス L23
+NIKON
+COOLPIX L23... ¥8800
+2025-11-25 18:56:20 [INFO]    [41位] ヴァシュロンコンスタンタン... ¥935000
+2025-11-25 18:56:20 [INFO]    [42位] (816)
+オリンパスM-1
+50mmf1.8
+OLYMPUS M-1... ¥48400
+2025-11-25 18:56:20 [INFO]    [43位] (112)
+京セラ
+コンタックスRX
+CONTAX RX... ¥22000
+2025-11-25 18:56:20 [INFO]    [44位] (097)
+ライカDIII
+LEICA DIII
+CHROME... ¥74800
+2025-11-25 18:56:20 [INFO]    [45位] (025)
+ローライQBM
+50mmf1.4
+ROLLEI
+HFT PLANAR... ¥42900
+2025-11-25 18:56:20 [INFO]    [46位] (032)
+ローライI(B1)
+ローライナーNo.1
+ROLLEI I
+ROLLEINAR No.1... ¥15400
+2025-11-25 18:56:20 [INFO]    [47位] ヴァシュロンコンスタンタン... ¥682000
+2025-11-25 18:56:21 [INFO]    [48位] オメガ... ¥385000
+2025-11-25 18:56:21 [INFO]    [49位] ロンジン リンドバーグ... ¥495000
+2025-11-25 18:56:21 [INFO]    [50位] ヴァシュロンコンスタンタン... ¥748000
+2025-11-25 18:56:21 [INFO]    [51位] パテックフィリップ　1450... ¥1320000
+2025-11-25 18:56:21 [INFO]    [52位] ロレックス　2940... ¥550000
+2025-11-25 18:56:21 [INFO]    [53位] セイコー　グランドセイコー... ¥298000
+2025-11-25 18:56:21 [INFO]    [54位] (817)
+オリンパスOM-1
+50mmf1.4
+OLYMPUS OM-1
+G.ZUIKO AUTO-S... ¥35200
+2025-11-25 18:56:21 [INFO]    [55位] (037)
+オリンパス
+OLYMPUS
+TOUGH TG830... ¥15400
+2025-11-25 18:56:21 [INFO]    [56位] (039)
+京セラ
+サムライ Z2
+KYOCERA
+SAMURAI Z2... ¥11000
+2025-11-25 18:56:21 [INFO]    [57位] (919)
+ライカM
+135mmf4.0
+LEICA
+TELE-ELMAR... ¥38500
+2025-11-25 18:56:22 [INFO]    [58位] (903)
+フジフィルム
+FUJIFILM
+FINE PIX XP140... ¥26400
+2025-11-25 18:56:22 [INFO]    [59位] (212)
+M42
+35mmf2.4
+フレクトゴン
+ZEISS FLEKTOGON... ¥58300
+2025-11-25 18:56:22 [INFO]    [60位] (418)
+M42
+55mmf1.4
+ポルスト
+PORST COLOR REFLEX... ¥33000
+2025-11-25 18:56:22 [INFO]    [61位] ロレックス　4486... ¥990000
+2025-11-25 18:56:22 [INFO]    [62位] パテックフィリップ　3544... ¥1760000
+2025-11-25 18:56:22 [INFO]    [63位] グレース　ファブリオ... ¥121000
+2025-11-25 18:56:22 [INFO]    [64位] (243)
+ローライ2眼レフ用(B2)
+フォーカシングノブ
+ROLLEI TLR
+FOCUSING KNOB... ¥5500
+2025-11-25 18:56:22 [INFO]    [65位] (242)
+ローライII(B2)
+黄色フィルター
+ROLLEI II
+YELLOW FILTER... ¥3300
+2025-11-25 18:56:22 [INFO]    [66位] (241)
+ローライII(B2)
+UVフィルター
+ROLLEI II
+UV FILTER... ¥2200
+2025-11-25 18:56:23 [INFO]    [67位] (421)
+ローライII(B2)
+ローライナーNo.1
+ROLLEI II
+ROLLEINAR No.1... ¥19800
+2025-11-25 18:56:23 [INFO]    [68位] (624)
+ローライ35S
+ROLLEI 35S
+BLACK
+SONNAR... ¥79200
+2025-11-25 18:56:23 [INFO]    [69位] (307)
+ローライフレックス2.8F
+ROLLEIFLEX 2.8F
+PLANAR... ¥286000
+2025-11-25 18:56:23 [INFO]    [70位] (422)
+ライカM4
+No.1178223
+LEICA M4... ¥286000
+2025-11-25 18:56:23 [INFO]    [71位] (211)
+ライカL用
+8.5cmf2.8
+SUPER ROKKOR... ¥38500
+2025-11-25 18:56:23 [INFO]    [72位] (416)
+ライカM
+50mmf2.0
+LEICA
+SUMMICRON-M... ¥242000
+2025-11-25 18:56:24 [INFO]    [73位] (871)
+ライカL
+5cmf2.0
+LEICA
+SUMMAR... ¥64900
+2025-11-25 18:56:24 [INFO]    [74位] エテルナ　マチック... ¥88000
+2025-11-25 18:56:24 [INFO]    [75位] ゼニス　レスピレーターX... ¥110000
+2025-11-25 18:56:24 [INFO]    [76位] ジャンイブ　セクトラ... ¥55000
+2025-11-25 18:56:24 [INFO]    [77位] (141)
+ペンタックスSV
+ブラック
+ASAHI
+PENTAX SV
+55mmf1.8... ¥33000
+2025-11-25 18:56:24 [INFO]    [78位] (651)
+オリンパス ペン W
+25mmf2.8
+OLYMPUS-PEN W... ¥63800
+2025-11-25 18:56:24 [INFO]    [79位] (603)
+ニコン ED
+AF ニッコール
+ED AF NIKKOR
+18-35mm 3.5-4.5D... ¥14300
+2025-11-25 18:56:24 [INFO]    [80位] (705)
+キヤノン
+CANON
+POWER SHOT
+SX620 HS... ¥36300
+2025-11-25 18:56:24 [INFO]    [81位] パテックフィリップ　425J... ¥1650000
+2025-11-25 18:56:24 [INFO]    [82位] (949)
+フジカ
+FUJICA
+GS645W
+PROFESSIONAL... ¥154000
+2025-11-25 18:56:24 [INFO]    [83位] (031)
+ライカL用
+5cmf1.8
+スーパーロッコール
+MINOLTA
+SUPER ROKKOR... ¥44000
+2025-11-25 18:56:24 [INFO]    [84位] (629)
+DRズミクロン
+50mmf2.0(M)
+LEICA
+DR SUMMICRON... ¥187000
+2025-11-25 18:56:24 [INFO]    [85位] (305)
+ミノルタ CLE
+MINOLTA CLE
+40mmf2
+M-ROKKOR... ¥198000
+2025-11-25 18:56:25 [INFO]    [86位] (661)
+ローライフレックス3.5F
+ROLLEIFLEX 3.5F
+XENOTAR
+WF... ¥297000
+2025-11-25 18:56:25 [INFO]    [87位] (456)
+TAMRON
+SP35mmf1.8
+Di VC USD
+ニコン用... ¥38500
+2025-11-25 18:56:25 [INFO]    [88位] (656)
+ニコンF3 HP
+NIKON F3 HP... ¥99000
+2025-11-25 18:56:25 [INFO]    [89位] (443)
+オリンパス ペンFT
+40mmf1.4
+OLYMPUS PEN-FT
+BLACK... ¥68200
+2025-11-25 18:56:25 [INFO]    [90位] セイコー　ワンプッシュクロノ... ¥220000
+2025-11-25 18:56:25 [INFO]    [91位] U-BOAT... ¥165000
+2025-11-25 18:56:25 [INFO]    [92位] (628)
+ローライQBM
+50mmf1.4
+ROLLEI QBM
+PLANAR... ¥38500
+2025-11-25 18:56:25 [INFO]    [93位] (712)
+ライカL用
+20mmf5.6
+ルサール
+RUSSAR... ¥68200
+2025-11-25 18:56:25 [INFO]    [94位] (691)
+オリンパス OM-1
+OLYMPUS OM-1
+BLACK... ¥17600
+2025-11-25 18:56:25 [INFO]    [95位] (693)
+オリンパス・ペンF用
+25mmf4.0
+OLYMPUS
+E. ZUIKO MC AUTO-W... ¥69300
+2025-11-25 18:56:25 [INFO]    [96位] (694)
+ライカL用
+25mmf4
+VOIGTLANDER
+SNAPSHOT-SKOPAR... ¥48400
+2025-11-25 18:56:26 [INFO]    [97位] (102)
+ローライTRL用(B3)
+ロ―ライフィックス
+ROLLEI TLR
+ROLLEIFIX... ¥11000
+2025-11-25 18:56:26 [INFO]    [98位] (129)
+ローライIII(B3)
+ローライナーNo.2
+ROLLEI III
+ROLLEINAR No.2... ¥18700
+2025-11-25 18:56:26 [INFO]    [99位] (821)
+ローライIII(B3)
+ローライナーNo.2
+ROLLEI III
+ROLLEINAR No.2... ¥8800
+2025-11-25 18:56:26 [INFO]    [100位] (572)
+ライカ
+12586
+LEICA
+LENS HOOD
+50/1.4... ¥16500
+2025-11-25 18:56:26 [INFO] ✅ スクレイピング成功: 100件
+2025-11-25 18:56:26 [INFO]    取得: 100件
+2025-11-25 18:56:26 [INFO] 
+============================================================
+2025-11-25 18:56:26 [INFO] 📊 一貫性チェック結果
+2025-11-25 18:56:26 [INFO] ============================================================
+2025-11-25 18:56:26 [INFO]    チェック1: [1位] IWC... (hash: ef0e6ad3)
+2025-11-25 18:56:26 [INFO]    チェック2: [1位] IWC... (hash: ef0e6ad3)
+2025-11-25 18:56:26 [INFO] ✅ 一貫性確認: 全チェックで同じ1位
+2025-11-25 18:56:26 [INFO] ✅ 最終結果: 100件
+---URL_INDEX:0---
+IWC 495000円||https://img17.shop-pro.jp/PA01265/366/product/189511717_th.jpg?cmsp_timestamp=20251125125712
+セイコーGS　GMT 396000円||https://img17.shop-pro.jp/PA01265/366/product/189511679_th.jpg?cmsp_timestamp=20251125125212
+ヴァシュロンコンスタンタン 1760000円||https://img17.shop-pro.jp/PA01265/366/product/189447520_th.jpg?cmsp_timestamp=20251120160836
+ロレックス　チェリーニ 594000円||https://img17.shop-pro.jp/PA01265/366/product/189447369_th.jpg?cmsp_timestamp=20251120160004
+(111)
+コンタックスRTS II
+CONTAX RTS II 35200円||https://img17.shop-pro.jp/PA01265/366/product/189409911_th.jpg?cmsp_timestamp=20251120091617
+(935)
+リコーXR500
+RICOH XR500 7700円||https://img17.shop-pro.jp/PA01265/366/product/189409052_th.jpg?cmsp_timestamp=20251120091452
+パテックフィリップ　3445 2420000円||https://img17.shop-pro.jp/PA01265/366/product/189407584_th.jpg?cmsp_timestamp=20251118143003
+(038)
+ニコンF用
+45mmf2.8
+NIKON
+GN AUTO NIKKOR 44000円||https://img17.shop-pro.jp/PA01265/366/product/189405050_th.jpg?cmsp_timestamp=20251120090827
+(906)
+ニコンF用
+35mmf2.8
+NIKON
+Ai-S NIKKOR 25300円||https://img17.shop-pro.jp/PA01265/366/product/189404962_th.jpg?cmsp_timestamp=20251120090552
+(905)
+ニコンF用
+24mmf2.8
+NIKON
+Ai-S NIKKOR 22000円||https://img17.shop-pro.jp/PA01265/366/product/189404903_th.jpg?cmsp_timestamp=20251120090508
+(110)
+ローライフレックス2.8D
+ROLLEIFLEX 2.8D
+PLANAR 242000円||https://img17.shop-pro.jp/PA01265/366/product/189386595_th.jpg?cmsp_timestamp=20251117101825
+(267)
+EXAKTA
+20mmf4.0
+フレクトゴン
+FLEKTGON 39600円||https://img17.shop-pro.jp/PA01265/366/product/189386131_th.jpg?cmsp_timestamp=20251117101708
+(943)
+オリンパス ペンFT
+40mmf1.4
+OLYMPUS PEN-FT
+BLACK 77000円||https://img17.shop-pro.jp/PA01265/366/product/189385646_th.jpg?cmsp_timestamp=20251117101549
+(335)
+エンサイン220
+ENSIGN 220
+AUTO-RANGE
+ENSAR 28600円||https://img17.shop-pro.jp/PA01265/366/product/189385493_th.jpg?cmsp_timestamp=20251117101526
+(337)
+コダック
+レチナI
+#010
+KODAK
+RETINA I
+XENAR 8800円||https://img17.shop-pro.jp/PA01265/366/product/189385385_th.jpg?cmsp_timestamp=20251117101428
+(313)
+キヤノン7
+No.937666
+CANON 7 17500円||https://img17.shop-pro.jp/PA01265/366/product/189385149_th.jpg?cmsp_timestamp=20251117101314
+(655)
+ライカM4
+No.1186088
+LEICA M4 330000円||https://img17.shop-pro.jp/PA01265/366/product/189385089_th.jpg?cmsp_timestamp=20251117101219
+ポルシェデザイン by IWC 385000円||https://img17.shop-pro.jp/PA01265/366/product/189371949_th.jpg?cmsp_timestamp=20251114174050
+IWC 374000円||https://img17.shop-pro.jp/PA01265/366/product/189371891_th.jpg?cmsp_timestamp=20251114173503
+ポールブレゲ 66000円||https://img17.shop-pro.jp/PA01265/366/product/189371693_th.jpg?cmsp_timestamp=20251114172127
+エベラール　クロノグラフ 235000円||https://img17.shop-pro.jp/PA01265/366/product/189371317_th.jpg?cmsp_timestamp=20251114170947
+(114)
+ニコンF2
+フォトミックAS
+NIKON F2
+PHOTOMIC AS
+BLACK 88000円||https://img17.shop-pro.jp/PA01265/366/product/189289689_th.jpg?cmsp_timestamp=20251109095741
+(141)
+ハッセルブラッド
+PLフィルター
+HASSELBLAD
+POLA FILTER 50 3300円||https://img17.shop-pro.jp/PA01265/366/product/189287939_th.jpg?cmsp_timestamp=20251109095529
+(143)
+キヤノン
+ファインダー
+35mm
+CANON VIEW FINDER 11000円||https://img17.shop-pro.jp/PA01265/366/product/189287652_th.jpg?cmsp_timestamp=20251109095356
+(144)
+オリンパス
+レンズフード
+OLYMPUS
+PEN-F LENS HOOD 3300円||https://img17.shop-pro.jp/PA01265/366/product/189287603_th.jpg?cmsp_timestamp=20251109095333
+(146)
+ツァイス
+黄色フィルター
+37mm
+ZEISS
+YELLOW FILTER 3300円||https://img17.shop-pro.jp/PA01265/366/product/189287540_th.jpg?cmsp_timestamp=20251109095130
+(147)
+ローライIII
+ラバーフード
+ROLLEI III
+RUBBER LENS HOOD 3300円||https://img17.shop-pro.jp/PA01265/366/product/189287492_th.jpg?cmsp_timestamp=20251109095050
+(148)
+ローライIII
+R1.5フィルター
+ROLLEI III
+R1.5 FILTER 3300円||https://img17.shop-pro.jp/PA01265/366/product/189287462_th.jpg?cmsp_timestamp=20251109095052
+(303)
+トプコン
+58mmf1.8
+RE AUTO TOPCOR 28600円||https://img17.shop-pro.jp/PA01265/366/product/189282534_th.jpg?cmsp_timestamp=20251109094854
+(622)
+オリンパス
+100mmf2.8
+OLYMPUS
+E. ZUIKO AUTO-T 27500円||https://img17.shop-pro.jp/PA01265/366/product/189282422_th.jpg?cmsp_timestamp=20251109094958
+(149)
+フォクトレンダー
+VCメーター
+VOIGTLANDER
+VC METER 12100円||https://img17.shop-pro.jp/PA01265/366/product/189281671_th.jpg?cmsp_timestamp=20251109094833
+(226)
+ロシア製
+ターレットファインダー
+USSR
+TURRET FINDER 11000円||https://img17.shop-pro.jp/PA01265/366/product/189280608_th.jpg?cmsp_timestamp=20251109094658
+(298)
+ミノルタ
+40mmf2.0
+M-ロッコール
+MINOLTA
+M-ROKKOR 66000円||https://img17.shop-pro.jp/PA01265/366/product/189279414_th.jpg?cmsp_timestamp=20251109095810
+モバード 121000円||https://img17.shop-pro.jp/PA01265/366/product/189266817_th.jpg?cmsp_timestamp=20251106161830
+ロンジン　ウィームス 253000円||https://img17.shop-pro.jp/PA01265/366/product/189266741_th.jpg?cmsp_timestamp=20251106161252
+ブレゲ　ﾄﾗﾝｽｱﾄﾗﾝﾃｨｯｸ 770000円||https://img17.shop-pro.jp/PA01265/366/product/189197144_th.jpg?cmsp_timestamp=20251101162305
+(152)
+ライカ
+E39 UVa
+LEICA
+FILTER 8800円||https://img17.shop-pro.jp/PA01265/366/product/189196057_th.jpg?cmsp_timestamp=20251102090938
+(154)
+ライカ
+13132
+E39 UVa
+LEICA
+FILTER 12100円||https://img17.shop-pro.jp/PA01265/366/product/189196017_th.jpg?cmsp_timestamp=20251102091023
+カルティエ　パシャ　1986 935000円||https://img17.shop-pro.jp/PA01265/366/product/189195880_th.jpg?cmsp_timestamp=20251101154056
+(132)
+ニコン
+クールピクス L23
+NIKON
+COOLPIX L23 8800円||https://img17.shop-pro.jp/PA01265/366/product/189195865_th.jpg?cmsp_timestamp=20251102090720
+ヴァシュロンコンスタンタン 935000円||https://img17.shop-pro.jp/PA01265/366/product/189195746_th.jpg?cmsp_timestamp=20251101152553
+(816)
+オリンパスM-1
+50mmf1.8
+OLYMPUS M-1 48400円||https://img17.shop-pro.jp/PA01265/366/product/189195689_th.jpg?cmsp_timestamp=20251102090638
+(112)
+京セラ
+コンタックスRX
+CONTAX RX 22000円||https://img17.shop-pro.jp/PA01265/366/product/189195595_th.jpg?cmsp_timestamp=20251102090533
+(097)
+ライカDIII
+LEICA DIII
+CHROME 74800円||https://img17.shop-pro.jp/PA01265/366/product/189195177_th.jpg?cmsp_timestamp=20251102090345
+(025)
+ローライQBM
+50mmf1.4
+ROLLEI
+HFT PLANAR 42900円||https://img17.shop-pro.jp/PA01265/366/product/189181682_th.jpg?cmsp_timestamp=20251101125421
+(032)
+ローライI(B1)
+ローライナーNo.1
+ROLLEI I
+ROLLEINAR No.1 15400円||https://img17.shop-pro.jp/PA01265/366/product/189181305_th.jpg?cmsp_timestamp=20251101125117
+ヴァシュロンコンスタンタン 682000円||https://img17.shop-pro.jp/PA01265/366/product/189131070_th.jpg?cmsp_timestamp=20251027161917
+オメガ 385000円||https://img17.shop-pro.jp/PA01265/366/product/189123812_th.jpg?cmsp_timestamp=20251027160946
+ロンジン リンドバーグ 495000円||https://img17.shop-pro.jp/PA01265/366/product/189123435_th.jpg?cmsp_timestamp=20251027122410
+ヴァシュロンコンスタンタン 748000円||https://img17.shop-pro.jp/PA01265/366/product/189123096_th.jpg?cmsp_timestamp=20251027121809
+パテックフィリップ　1450 1320000円||https://img17.shop-pro.jp/PA01265/366/product/189122228_th.jpg?cmsp_timestamp=20251027120456
+ロレックス　2940 550000円||https://img17.shop-pro.jp/PA01265/366/product/189119888_th.jpg?cmsp_timestamp=20251027113443
+セイコー　グランドセイコー 298000円||https://img17.shop-pro.jp/PA01265/366/product/189112101_th.jpg?cmsp_timestamp=20251026154823
+(817)
+オリンパスOM-1
+50mmf1.4
+OLYMPUS OM-1
+G.ZUIKO AUTO-S 35200円||https://img17.shop-pro.jp/PA01265/366/product/189028136_th.jpg?cmsp_timestamp=20251026182449
+(037)
+オリンパス
+OLYMPUS
+TOUGH TG830 15400円||https://img17.shop-pro.jp/PA01265/366/product/189027812_th.jpg?cmsp_timestamp=20251026182129
+2025-11-25 18:56:26 [INFO] SUCCESS
+(039)
+京セラ
+サムライ Z2
+KYOCERA
+SAMURAI Z2 11000円||https://img17.shop-pro.jp/PA01265/366/product/189027716_th.jpg?cmsp_timestamp=20251026182108
+(919)
+ライカM
+135mmf4.0
+LEICA
+TELE-ELMAR 38500円||https://img17.shop-pro.jp/PA01265/366/product/189027374_th.jpg?cmsp_timestamp=20251026181937
+(903)
+フジフィルム
+FUJIFILM
+FINE PIX XP140 26400円||https://img17.shop-pro.jp/PA01265/366/product/189019275_th.jpg?cmsp_timestamp=20251026181527
+(212)
+M42
+35mmf2.4
+フレクトゴン
+ZEISS FLEKTOGON 58300円||https://img17.shop-pro.jp/PA01265/366/product/189018743_th.jpg?cmsp_timestamp=20251026181417
+(418)
+M42
+55mmf1.4
+ポルスト
+PORST COLOR REFLEX 33000円||https://img17.shop-pro.jp/PA01265/366/product/189018549_th.jpg?cmsp_timestamp=20251026181322
+ロレックス　4486 990000円||https://img17.shop-pro.jp/PA01265/366/product/189005269_th.jpg?cmsp_timestamp=20251018151758
+パテックフィリップ　3544 1760000円||https://img17.shop-pro.jp/PA01265/366/product/188996676_th.jpg?cmsp_timestamp=20251017170707
+グレース　ファブリオ 121000円||https://img17.shop-pro.jp/PA01265/366/product/188996538_th.jpg?cmsp_timestamp=20251017170020
+(243)
+ローライ2眼レフ用(B2)
+フォーカシングノブ
+ROLLEI TLR
+FOCUSING KNOB 5500円||https://img17.shop-pro.jp/PA01265/366/product/188941424_th.jpg?cmsp_timestamp=20251017092350
+(242)
+ローライII(B2)
+黄色フィルター
+ROLLEI II
+YELLOW FILTER 3300円||https://img17.shop-pro.jp/PA01265/366/product/188940309_th.jpg?cmsp_timestamp=20251017092214
+(241)
+ローライII(B2)
+UVフィルター
+ROLLEI II
+UV FILTER 2200円||https://img17.shop-pro.jp/PA01265/366/product/188940265_th.jpg?cmsp_timestamp=20251017092138
+(421)
+ローライII(B2)
+ローライナーNo.1
+ROLLEI II
+ROLLEINAR No.1 19800円||https://img17.shop-pro.jp/PA01265/366/product/188939511_th.jpg?cmsp_timestamp=20251017091924
+(624)
+ローライ35S
+ROLLEI 35S
+BLACK
+SONNAR 79200円||https://img17.shop-pro.jp/PA01265/366/product/188938075_th.jpg?cmsp_timestamp=20251017091919
+(307)
+ローライフレックス2.8F
+ROLLEIFLEX 2.8F
+PLANAR 286000円||https://img17.shop-pro.jp/PA01265/366/product/188936413_th.jpg?cmsp_timestamp=20251017091822
+(422)
+ライカM4
+No.1178223
+LEICA M4 286000円||https://img17.shop-pro.jp/PA01265/366/product/188909415_th.jpg?cmsp_timestamp=20251017092842
+(211)
+ライカL用
+8.5cmf2.8
+SUPER ROKKOR 38500円||https://img17.shop-pro.jp/PA01265/366/product/188908991_th.jpg?cmsp_timestamp=20251017091722
+(416)
+ライカM
+50mmf2.0
+LEICA
+SUMMICRON-M 242000円||https://img17.shop-pro.jp/PA01265/366/product/188908941_th.jpg?cmsp_timestamp=20251017091619
+(871)
+ライカL
+5cmf2.0
+LEICA
+SUMMAR 64900円||https://img17.shop-pro.jp/PA01265/366/product/188908891_th.jpg?cmsp_timestamp=20251017091615
+エテルナ　マチック 88000円||https://img17.shop-pro.jp/PA01265/366/product/188902495_th.jpg?cmsp_timestamp=20251011170525
+ゼニス　レスピレーターX 110000円||https://img17.shop-pro.jp/PA01265/366/product/188901939_th.jpg?cmsp_timestamp=20251011160854
+ジャンイブ　セクトラ 55000円||https://img17.shop-pro.jp/PA01265/366/product/188901824_th.jpg?cmsp_timestamp=20251011155947
+(141)
+ペンタックスSV
+ブラック
+ASAHI
+PENTAX SV
+55mmf1.8 33000円||https://img17.shop-pro.jp/PA01265/366/product/188766623_th.jpg?cmsp_timestamp=20251010150303
+(651)
+オリンパス ペン W
+25mmf2.8
+OLYMPUS-PEN W 63800円||https://img17.shop-pro.jp/PA01265/366/product/188766357_th.jpg?cmsp_timestamp=20251010150244
+(603)
+ニコン ED
+AF ニッコール
+ED AF NIKKOR
+18-35mm 3.5-4.5D 14300円||https://img17.shop-pro.jp/PA01265/366/product/188766230_th.jpg?cmsp_timestamp=20251010150114
+(705)
+キヤノン
+CANON
+POWER SHOT
+SX620 HS 36300円||https://img17.shop-pro.jp/PA01265/366/product/188766026_th.jpg?cmsp_timestamp=20251010150307
+パテックフィリップ　425J 1650000円||https://img17.shop-pro.jp/PA01265/366/product/188754949_th.jpg?cmsp_timestamp=20251005172238
+(949)
+フジカ
+FUJICA
+GS645W
+PROFESSIONAL 154000円||https://img17.shop-pro.jp/PA01265/366/product/188753887_th.jpg?cmsp_timestamp=20251010145752
+(031)
+ライカL用
+5cmf1.8
+スーパーロッコール
+MINOLTA
+SUPER ROKKOR 44000円||https://img17.shop-pro.jp/PA01265/366/product/188752773_th.jpg?cmsp_timestamp=20251010145620
+(629)
+DRズミクロン
+50mmf2.0(M)
+LEICA
+DR SUMMICRON 187000円||https://img17.shop-pro.jp/PA01265/366/product/188752726_th.jpg?cmsp_timestamp=20251010145505
+(305)
+ミノルタ CLE
+MINOLTA CLE
+40mmf2
+M-ROKKOR 198000円||https://img17.shop-pro.jp/PA01265/366/product/188752398_th.jpg?cmsp_timestamp=20251010145440
+(661)
+ローライフレックス3.5F
+ROLLEIFLEX 3.5F
+XENOTAR
+WF 297000円||https://img17.shop-pro.jp/PA01265/366/product/188749856_th.jpg?cmsp_timestamp=20251010145424
+(456)
+TAMRON
+SP35mmf1.8
+Di VC USD
+ニコン用 38500円||https://img17.shop-pro.jp/PA01265/366/product/188749813_th.jpg?cmsp_timestamp=20251010145323
+(656)
+ニコンF3 HP
+NIKON F3 HP 99000円||https://img17.shop-pro.jp/PA01265/366/product/188745010_th.jpg?cmsp_timestamp=20251010145047
+(443)
+オリンパス ペンFT
+40mmf1.4
+OLYMPUS PEN-FT
+BLACK 68200円||https://img17.shop-pro.jp/PA01265/366/product/188744934_th.jpg?cmsp_timestamp=20251010145041
+セイコー　ワンプッシュクロノ 220000円||https://img17.shop-pro.jp/PA01265/366/product/188731341_th.jpg?cmsp_timestamp=20251007133254
+U-BOAT 165000円||https://img17.shop-pro.jp/PA01265/366/product/188731239_th.jpg?cmsp_timestamp=20251003121314
+(628)
+ローライQBM
+50mmf1.4
+ROLLEI QBM
+PLANAR 38500円||https://img17.shop-pro.jp/PA01265/366/product/188675582_th.jpg?cmsp_timestamp=20250929164123
+(712)
+ライカL用
+20mmf5.6
+ルサール
+RUSSAR 68200円||https://img17.shop-pro.jp/PA01265/366/product/188675421_th.jpg?cmsp_timestamp=20250929163945
+(691)
+オリンパス OM-1
+OLYMPUS OM-1
+BLACK 17600円||https://img17.shop-pro.jp/PA01265/366/product/188675329_th.jpg?cmsp_timestamp=20250929163918
+(693)
+オリンパス・ペンF用
+25mmf4.0
+OLYMPUS
+E. ZUIKO MC AUTO-W 69300円||https://img17.shop-pro.jp/PA01265/366/product/188675209_th.jpg?cmsp_timestamp=20250929163814
+(694)
+ライカL用
+25mmf4
+VOIGTLANDER
+SNAPSHOT-SKOPAR 48400円||https://img17.shop-pro.jp/PA01265/366/product/188675145_th.jpg?cmsp_timestamp=20250929163653
+(102)
+ローライTRL用(B3)
+ロ―ライフィックス
+ROLLEI TLR
+ROLLEIFIX 11000円||https://img17.shop-pro.jp/PA01265/366/product/188671427_th.jpg?cmsp_timestamp=20250928182847
+(129)
+ローライIII(B3)
+ローライナーNo.2
+ROLLEI III
+ROLLEINAR No.2 18700円||https://img17.shop-pro.jp/PA01265/366/product/188671148_th.jpg?cmsp_timestamp=20250928182737
+(821)
+ローライIII(B3)
+ローライナーNo.2
+ROLLEI III
+ROLLEINAR No.2 8800円||https://img17.shop-pro.jp/PA01265/366/product/188671121_th.jpg?cmsp_timestamp=20250928182655
+(572)
+ライカ
+12586
+LEICA
+LENS HOOD
+50/1.4 16500円||https://img17.shop-pro.jp/PA01265/366/product/188670942_th.jpg?cmsp_timestamp=20250928182528

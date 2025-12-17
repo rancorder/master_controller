@@ -1,0 +1,8 @@
+{
+  "name": "scraper-system",
+  "version": "1.0.0",
+  "dependencies": {
+    "puppeteer": "^21.6.1",
+    "axios": "^1.6.2"
+  }
+}
