@@ -4,7 +4,7 @@
 [![Type checked: mypy](https://img.shields.io/badge/type%20checked-mypy%20strict-blue.svg)](http://mypy-lang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**43サイト・73URLを24時間365日監視する統合制御システム**
+**54サイト・81URLを24時間365日監視する統合制御システム**
 
 稼働率99.9%以上 | SQLiteデッドロック完全対策 | Netflix級設計パターン
 
@@ -26,7 +26,7 @@
 
 ## 🎯 概要
 
-**Master Controller v24**は、43サイト・73URLのWebスクレイピングを統合制御するエンタープライズ級システムです。
+**Master Controller v24**は、54サイト・81URLのWebスクレイピングを統合制御するエンタープライズ級システムです。
 
 ### なぜこのシステムを作ったのか？
 
@@ -87,7 +87,7 @@ graph TB
 ```
 
 **主要コンポーネント:**
-- **Config Manager**: shop_config.jsonから43サイト設定を読み込み
+- **Config Manager**: shop_config.jsonから54サイト設定を読み込み
 - **Priority1 Executor**: 統計ベース動的間隔制御（60秒〜1時間）
 - **Priority2 Cycle**: 全サイト完全実行後に次サイクル開始
 - **Diff System**: ハッシュベース差分検知 + 6時間重複通知防止
@@ -98,7 +98,7 @@ graph TB
 ## ✨ 主な機能
 
 ### 🔄 統合制御
-- 43サイト・73URLを単一プロセスで統合管理
+- 54サイト・81URLを単一プロセスで統合管理
 - Priority1（重要）とPriority2（通常）の2階層制御
 - 深夜時間帯（1時〜8時）は30分固定間隔
 
@@ -204,7 +204,7 @@ log_handler = RotatingFileHandler(
 
 | 指標 | 実績 |
 |------|------|
-| 稼働サイト数 | **43サイト・73URL** |
+| 稼働サイト数 | **54サイト・81URL** |
 | 稼働率 | **99.9%以上** |
 | 1日あたりチェック回数 | **2,880回/サイト** |
 | 累計監視時間 | **24時間365日連続** |
@@ -370,7 +370,7 @@ MIT License
 **rancorder**
 
 - GitHub: [@rancorder](https://github.com/rancorder)
-- 実績: 43サイト・24時間365日稼働中
+- 実績: 54サイト・24時間365日稼働中
 - 開発期間: 1週間（v1） → 継続的改善
 
 ---
