@@ -1,4 +1,4 @@
-# 🎯 Master Controller v24 - エンタープライズ級統合制御システム
+# 🎯 Master Controller v29 - エンタープライズ級統合制御システム
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Type checked: mypy](https://img.shields.io/badge/type%20checked-mypy%20strict-blue.svg)](http://mypy-lang.org/)
@@ -26,7 +26,7 @@
 
 ## 🎯 概要
 
-**Master Controller v24**は、54サイト・81URLのWebスクレイピングを統合制御するエンタープライズ級システムです。
+**Master Controller v29**は、54サイト・81URLのWebスクレイピングを統合制御するエンタープライズ級システムです。
 
 ### なぜこのシステムを作ったのか？
 
@@ -125,14 +125,14 @@ graph TB
 
 ### 1. SQLiteデッドロック完全対策
 
-**v24での改善:**
+**v29での改善:**
 ```python
 # ❌ v23以前: デッドロック頻発
 isolation_level='IMMEDIATE'  # 書き込みロック即座に取得
 max_retries = 3
 base_delay = 0.1
 
-# ✅ v24: 99.99%耐性
+# ✅ v29: 99.99%耐性
 isolation_level='DEFERRED'   # 読み取りロック不要
 max_retries = 10
 base_delay = 0.05
@@ -179,10 +179,10 @@ ErrorHandler.handle(e, "コンテキスト", ErrorSeverity.RECOVERABLE)
 
 ### 4. ログローテーション最適化
 
-**v24での改善:**
+**v29での改善:**
 ```python
 # ❌ v23以前: カスタムローテーション（複雑・バグ多発）
-# ✅ v24: 標準RotatingFileHandler使用
+# ✅ v29: 標準RotatingFileHandler使用
 log_handler = RotatingFileHandler(
     'master_controller.log',
     maxBytes=10*1024*1024,  # 10MB
