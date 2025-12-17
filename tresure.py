@@ -72,7 +72,7 @@ class ScraperConfig:
     SITE_BASE_URL: str = "https://ec.treasure-f.com"
     
     # ChatWork設定
-    CHATWORK_TOKEN: str = "987cf44efbf5529a09b1317a85058640"
+    CHATWORK_TOKEN: str = "your token"
     CHATWORK_ROOM_ID: str = "414116324"
     ADMIN_ROOM_ID: str = "413142921"
     
