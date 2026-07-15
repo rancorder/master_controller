@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スクレイピングシステム監視</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header h1 { color: #667eea; margin-bottom: 10px; font-size: 2em; }
+        .status-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .status-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .status-running { background: #10b981; color: white; }
+        .status-stopped { background: #ef4444; color: white; }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .stat-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+        }
+        .stat-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .stat-label { font-size: 0.9em; opacity: 0.9; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        tr:hover { background: #f9fafb; }
+        .refresh-btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        .refresh-btn:hover { background: #5a67d8; }
+        .auto-refresh {
+            color: #6b7280;
+            font-size: 0.9em;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>スクレイピングシステム監視ダッシュボード</h1>
+            <p>リアルタイム稼働状況</p>
+        </div>
+        
+        <div class="status-card">
+            <h2>システム状態</h2>
+            <div style="margin-top: 15px;">
+                <span class="status-badge {% if system_status.is_running %}status-running{% else %}status-stopped{% endif %}">
+                    {{ system_status.status }}
+                </span>
+                <span class="auto-refresh">自動更新: 30秒ごと</span>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value">{{ system_status.uptime }}</div>
+                    <div class="stat-label">稼働時間</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">{{ system_status.total_executions }}</div>
+                    <div class="stat-label">総実行回数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">{{ system_status.success_rate }}%</div>
+                    <div class="stat-label">成功率</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">{{ total_products }}</div>
+                    <div class="stat-label">監視中商品数</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status-card">
+            <h2>サイト別実行状況 ({{ active_sites }}サイト)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>サイト名</th>
+                        <th>監視中商品数</th>
+                        <th>最終更新</th>
+                        <th>状態</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for site in site_stats %}
+                    <tr>
+                        <td><strong>{{ site.site_name }}</strong></td>
+                        <td>{{ site.product_count }}件</td>
+                        <td>{{ site.last_update }}</td>
+                        <td>{{ site.status }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
+        <button class="refresh-btn" onclick="location.reload()">手動更新</button>
+    </div>
+    
+    <script>
+        setInterval(() => { location.reload(); }, 30000);
+    </script>
+</body>
+</html>

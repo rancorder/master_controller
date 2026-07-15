@@ -1,0 +1,8 @@
+{
+  "circuit_breaker": {
+    "failure_count": 0,
+    "last_failure_time": null,
+    "is_open": false
+  },
+  "last_updated": "2026-07-15T22:29:39.256565"
+}

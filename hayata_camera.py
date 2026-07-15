@@ -25,7 +25,7 @@ class HayataCameraConfig:
     
     # スクレイピング対象URL
     BASE_URL: str = "https://www.hayatacamera.co.jp"
-    TARGET_URL: str = f"{BASE_URL}/category/consign-new/"
+    TARGET_URL: str = f"{BASE_URL}/consign/"
     
     # タイムアウト設定（秒）
     REQUEST_TIMEOUT: int = 30

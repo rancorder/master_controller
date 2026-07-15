@@ -66,6 +66,17 @@
         "url_index":0
     },
     {
+        "py_file":"akasaka_camera.py",
+        "display_name":"アカサカカメラ",
+        "category":"アクセサリー新着",
+        "scraping_url":"https://www.akasaka-camera.com/product/index/9",
+        "priority":2,
+        "is_active":true,
+        "notification_enabled":"385402385",
+        "custom_interval":300.0,
+        "url_index":1
+    },
+    {
         "py_file":"suwa_shashinkan.py",
         "display_name":"諏訪写真機",
         "category":"新着1P",

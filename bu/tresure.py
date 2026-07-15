@@ -1,15 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-treasure_lite.py v5.0 - 商品詳細URL取得 + 通知履歴JSON出力版
+treasure_lite.py v4.0 - Production-Ready Refactored Version
 
-【v5.0 新機能】
-✅ 商品詳細URL・商品ID取得（/item/XXXXXXX）
-✅ 通知した商品情報を専用JSONファイルに保存（追跡用）
-✅ 通知メッセージに商品詳細URL・タイムスタンプを追加
-✅ スナップショットに商品ID・詳細URLを含める
-
-【v4.0からの継続機能】
+【主な改善点】
 ✅ リソースリーク完全防止（Context Manager徹底）
 ✅ Circuit Breaker実装（連続失敗時の自動保護）
 ✅ 型安全性100%（mypy strict合格）
@@ -29,7 +23,7 @@ import json
 import logging
 import logging.handlers
 import os
-import re
+import re  # ★★★ 追加: 正規表現モジュール ★★★
 import sys
 import tempfile
 import time
@@ -58,7 +52,7 @@ class NotificationSender(Protocol):
 # 設定クラス（バリデーション付き）
 # ============================================================
 
-@dataclass(frozen=True)
+@dataclass(frozen=True)  # Immutableにして予期せぬ変更を防止
 class ScraperConfig:
     """スクレイパー設定（バリデーション付き）"""
     
@@ -67,9 +61,6 @@ class ScraperConfig:
         "https://ec.treasure-f.com/search?"
         "category=1029&category2=1031&size=grid&order=newarrival&number=30&step=1"
     )
-    
-    # サイトベースURL（商品詳細URL生成用）
-    SITE_BASE_URL: str = "https://ec.treasure-f.com"
     
     # ChatWork設定
     CHATWORK_TOKEN: str = "987cf44efbf5529a09b1317a85058640"
@@ -85,17 +76,17 @@ class ScraperConfig:
     DOM_STABILITY_REQUIRED_CHECKS: int = 3
     
     # 1位の一貫性確認
-    TOP1_CONSISTENCY_CHECKS: int = 3  # v5.0: 2→3回に増加
-    TOP1_CONSISTENCY_INTERVAL: int = 30  # v5.0: 60→30秒に短縮
+    TOP1_CONSISTENCY_CHECKS: int = 2
+    TOP1_CONSISTENCY_INTERVAL: int = 60
     
     # リトライ設定
     MAX_RETRIES: int = 3
     BASE_RETRY_DELAY: int = 10
     MAX_RETRY_DELAY: int = 300
     
-    # Circuit Breaker設定
-    CIRCUIT_BREAKER_THRESHOLD: int = 5
-    CIRCUIT_BREAKER_TIMEOUT: int = 300
+    # Circuit Breaker設定（新規）
+    CIRCUIT_BREAKER_THRESHOLD: int = 5  # 連続失敗回数
+    CIRCUIT_BREAKER_TIMEOUT: int = 300  # 回復待機時間（秒）
     
     # 監視設定
     CHECK_INTERVAL: int = 30
@@ -107,8 +98,7 @@ class ScraperConfig:
     # ファイルパス
     SNAPSHOT_FILE: str = "treasure_top1_snapshot.json"
     NOTIFICATION_HISTORY_FILE: str = "treasure_notification_history.json"
-    STATE_FILE: str = "treasure_state.json"
-    NOTIFIED_PRODUCTS_FILE: str = "treasure_notified_products.json"  # 🆕 通知済み商品履歴
+    STATE_FILE: str = "treasure_state.json"  # 新規：状態永続化
     
     # User Agent
     USER_AGENT: str = (
@@ -120,7 +110,7 @@ class ScraperConfig:
     # ログ設定
     LOG_FILE: str = "treasure_lite.log"
     LOG_ROTATION_HOURS: int = 6
-    LOG_BACKUP_COUNT: int = 4
+    LOG_BACKUP_COUNT: int = 4  # 24時間分保持
     LOG_LEVEL: str = "INFO"
     
     def __post_init__(self) -> None:
@@ -131,18 +121,23 @@ class ScraperConfig:
         """設定値の検証"""
         errors: List[str] = []
         
+        # URL検証
         if not self.BASE_URL.startswith(('http://', 'https://')):
             errors.append("BASE_URL must start with http:// or https://")
         
+        # トークン検証
         if not self.CHATWORK_TOKEN or len(self.CHATWORK_TOKEN) < 10:
             errors.append("CHATWORK_TOKEN is invalid or too short")
         
+        # タイムアウト検証
         if self.PAGE_LOAD_TIMEOUT <= 0:
             errors.append("PAGE_LOAD_TIMEOUT must be positive")
         
+        # リトライ検証
         if not 1 <= self.MAX_RETRIES <= 10:
             errors.append("MAX_RETRIES must be between 1 and 10")
         
+        # Circuit Breaker検証
         if self.CIRCUIT_BREAKER_THRESHOLD < 3:
             errors.append("CIRCUIT_BREAKER_THRESHOLD must be >= 3")
         
@@ -176,11 +171,20 @@ class StructuredFormatter(logging.Formatter):
         return json.dumps(log_obj, ensure_ascii=False)
 
 def setup_logger(use_json: bool = False) -> logging.Logger:
-    """構造化ログ設定"""
+    """
+    構造化ログ設定
+    
+    Args:
+        use_json: JSON形式で出力するか
+    
+    Returns:
+        設定済みロガー
+    """
     logger = logging.getLogger('TreasureLite')
     logger.setLevel(getattr(logging, CONFIG.LOG_LEVEL))
     logger.handlers.clear()
     
+    # フォーマッター
     if use_json:
         formatter = StructuredFormatter(datefmt='%Y-%m-%d %H:%M:%S')
     else:
@@ -189,6 +193,7 @@ def setup_logger(use_json: bool = False) -> logging.Logger:
             datefmt='%Y-%m-%d %H:%M:%S'
         )
     
+    # ファイルハンドラー（自動ローテーション）
     file_handler = logging.handlers.TimedRotatingFileHandler(
         CONFIG.LOG_FILE,
         when='H',
@@ -199,10 +204,12 @@ def setup_logger(use_json: bool = False) -> logging.Logger:
     file_handler.setLevel(logging.INFO)
     file_handler.setFormatter(formatter)
     
+    # コンソールハンドラー
     console_handler = logging.StreamHandler(sys.stdout)
     console_handler.setLevel(logging.INFO)
     console_handler.setFormatter(formatter)
     
+    # ハンドラー追加
     logger.addHandler(file_handler)
     logger.addHandler(console_handler)
     
@@ -215,7 +222,16 @@ LOGGER = setup_logger()
 # ============================================================
 
 def generate_hash(name: str, price: str) -> str:
-    """商品名と価格からハッシュ値（8桁）を生成"""
+    """
+    商品名と価格からハッシュ値（8桁）を生成
+    
+    Args:
+        name: 商品名
+        price: 価格
+    
+    Returns:
+        8桁のハッシュ値
+    """
     combined = f"{name}_{price}"
     return hashlib.md5(combined.encode()).hexdigest()[:8]
 
@@ -224,7 +240,17 @@ def exponential_backoff(
     base_delay: Optional[int] = None,
     max_delay: Optional[int] = None
 ) -> int:
-    """指数バックオフ計算"""
+    """
+    指数バックオフ計算
+    
+    Args:
+        attempt: 試行回数
+        base_delay: 基本待機時間
+        max_delay: 最大待機時間
+    
+    Returns:
+        待機時間（秒）
+    """
     base = base_delay or CONFIG.BASE_RETRY_DELAY
     max_wait = max_delay or CONFIG.MAX_RETRY_DELAY
     delay = min(base * (2 ** (attempt - 1)), max_wait)
@@ -232,7 +258,15 @@ def exponential_backoff(
 
 @contextmanager
 def atomic_write(filepath: Path) -> Iterator[Path]:
-    """アトミックなファイル書き込み（破損防止）"""
+    """
+    アトミックなファイル書き込み（破損防止）
+    
+    Args:
+        filepath: 書き込み先ファイルパス
+    
+    Yields:
+        一時ファイルパス
+    """
     temp_fd, temp_path = tempfile.mkstemp(
         dir=filepath.parent,
         prefix=f".{filepath.name}.",
@@ -244,27 +278,27 @@ def atomic_write(filepath: Path) -> Iterator[Path]:
     try:
         os.close(temp_fd)
         yield temp_filepath
+        
+        # アトミックに置き換え
         temp_filepath.replace(filepath)
+        
     except Exception:
+        # エラー時は一時ファイルを削除
         if temp_filepath.exists():
             temp_filepath.unlink()
         raise
 
 # ============================================================
-# データクラス（v5.0: item_url, item_id追加）
+# データクラス
 # ============================================================
 
 @dataclass(frozen=True)
 class Product:
-    """商品データ（Immutable）- v5.0拡張版"""
+    """商品データ（Immutable）"""
     name: str
     price: str
     img_url: str
     hash: str
-    item_id: str = ""      # 🆕 商品ID（例: 3090061371260510）
-    item_url: str = ""     # 🆕 商品詳細URL
-    store_name: str = ""   # 🆕 店舗名
-    scraped_at: str = ""   # 🆕 スクレイピング時刻
     
     def to_dict(self) -> Dict[str, str]:
         """辞書に変換"""
@@ -272,21 +306,12 @@ class Product:
     
     @classmethod
     def from_dict(cls, data: Dict[str, str]) -> Product:
-        """辞書から生成（後方互換性あり）"""
-        return cls(
-            name=data.get('name', ''),
-            price=data.get('price', '0'),
-            img_url=data.get('img_url', ''),
-            hash=data.get('hash', ''),
-            item_id=data.get('item_id', ''),
-            item_url=data.get('item_url', ''),
-            store_name=data.get('store_name', ''),
-            scraped_at=data.get('scraped_at', '')
-        )
+        """辞書から生成"""
+        return cls(**data)
     
     def __str__(self) -> str:
         """文字列表現"""
-        return f"Product(name={self.name[:30]}..., price=¥{self.price}, id={self.item_id}, hash={self.hash})"
+        return f"Product(name={self.name[:30]}..., price=¥{self.price}, hash={self.hash})"
 
 # ============================================================
 # Circuit Breaker（耐障害性向上）
@@ -318,17 +343,27 @@ class CircuitBreakerState:
         )
 
 class CircuitBreaker:
-    """Circuit Breaker パターン実装"""
+    """
+    Circuit Breaker パターン実装
+    
+    連続失敗時に一時的に処理を停止し、システムを保護
+    """
     
     def __init__(
         self,
         threshold: int = CONFIG.CIRCUIT_BREAKER_THRESHOLD,
         timeout: int = CONFIG.CIRCUIT_BREAKER_TIMEOUT
     ):
+        """
+        Args:
+            threshold: 連続失敗回数の閾値
+            timeout: 回復待機時間（秒）
+        """
         self.threshold = threshold
         self.timeout = timeout
         self.state = CircuitBreakerState()
         self.logger = LOGGER
+        
         self._load_state()
     
     def _load_state(self) -> None:
@@ -342,7 +377,9 @@ class CircuitBreaker:
                 data = json.load(f)
                 if 'circuit_breaker' in data:
                     self.state = CircuitBreakerState.from_dict(data['circuit_breaker'])
+            
             self.logger.info(f"Circuit Breaker状態読み込み: {self.state.to_dict()}")
+        
         except Exception as e:
             self.logger.error(f"Circuit Breaker状態読み込みエラー: {e}")
     
@@ -351,25 +388,35 @@ class CircuitBreaker:
         state_file = Path(CONFIG.STATE_FILE)
         
         try:
+            # 既存データを読み込み
             existing_data: Dict[str, Any] = {}
             if state_file.exists():
                 with open(state_file, 'r', encoding='utf-8') as f:
                     existing_data = json.load(f)
             
+            # Circuit Breaker状態を更新
             existing_data['circuit_breaker'] = self.state.to_dict()
             existing_data['last_updated'] = datetime.now().isoformat()
             
+            # アトミックに書き込み
             with atomic_write(state_file) as temp_path:
                 with open(temp_path, 'w', encoding='utf-8') as f:
                     json.dump(existing_data, f, ensure_ascii=False, indent=2)
+        
         except Exception as e:
             self.logger.error(f"Circuit Breaker状態保存エラー: {e}")
     
     def is_available(self) -> bool:
-        """処理実行可能かチェック"""
+        """
+        処理実行可能かチェック
+        
+        Returns:
+            True: 実行可能, False: Circuit Open（実行不可）
+        """
         if not self.state.is_open:
             return True
         
+        # Circuit Openだが、タイムアウト経過後は再試行
         if self.state.last_failure_time is None:
             return True
         
@@ -418,6 +465,7 @@ class CircuitBreaker:
                 self.logger.error(f"   連続失敗回数: {self.state.failure_count}回（閾値: {self.threshold}回）")
                 self.logger.error(f"   {self.timeout}秒間、処理を停止します")
                 self.logger.error("=" * 60)
+                
                 self.state.is_open = True
         else:
             self.logger.warning(f"⚠️ Circuit Breaker: 失敗記録 {self.state.failure_count}/{self.threshold}回")
@@ -435,8 +483,6 @@ class NotificationRecord:
     name: str
     price: str
     notified_at: datetime
-    item_id: str = ""      # 🆕
-    item_url: str = ""     # 🆕
     
     def to_dict(self) -> Dict[str, Any]:
         """辞書に変換"""
@@ -444,9 +490,7 @@ class NotificationRecord:
             'hash': self.hash,
             'name': self.name,
             'price': self.price,
-            'notified_at': self.notified_at.isoformat(),
-            'item_id': self.item_id,
-            'item_url': self.item_url
+            'notified_at': self.notified_at.isoformat()
         }
     
     @classmethod
@@ -456,15 +500,17 @@ class NotificationRecord:
             hash=data['hash'],
             name=data['name'],
             price=data['price'],
-            notified_at=datetime.fromisoformat(data['notified_at']),
-            item_id=data.get('item_id', ''),
-            item_url=data.get('item_url', '')
+            notified_at=datetime.fromisoformat(data['notified_at'])
         )
 
 class NotificationHistory:
     """通知履歴管理 - 重複通知を防止"""
     
     def __init__(self, max_size: int = CONFIG.MAX_NOTIFICATION_HISTORY):
+        """
+        Args:
+            max_size: 履歴の最大サイズ
+        """
         self.history: Deque[NotificationRecord] = deque(maxlen=max_size)
         self.logger = LOGGER
         self.max_size = max_size
@@ -523,7 +569,16 @@ class NotificationHistory:
             self.logger.error(f"通知履歴保存エラー: {e}")
     
     def should_notify(self, product_hash: str, product_name: str) -> bool:
-        """通知すべきか判定"""
+        """
+        通知すべきか判定
+        
+        Args:
+            product_hash: 商品ハッシュ
+            product_name: 商品名
+        
+        Returns:
+            True: 通知すべき, False: スキップすべき
+        """
         current_time = datetime.now()
         self._cleanup_old_history(current_time)
         
@@ -545,14 +600,17 @@ class NotificationHistory:
         return True
     
     def add_notification(self, product: Product) -> None:
-        """通知履歴に追加"""
+        """
+        通知履歴に追加
+        
+        Args:
+            product: 商品データ
+        """
         record = NotificationRecord(
             hash=product.hash,
             name=product.name,
             price=product.price,
-            notified_at=datetime.now(),
-            item_id=product.item_id,
-            item_url=product.item_url
+            notified_at=datetime.now()
         )
         
         self.history.append(record)
@@ -563,7 +621,12 @@ class NotificationHistory:
         )
     
     def _cleanup_old_history(self, current_time: datetime) -> None:
-        """古い履歴を削除"""
+        """
+        古い履歴を削除
+        
+        Args:
+            current_time: 現在時刻
+        """
         cutoff_time = current_time - timedelta(hours=CONFIG.NOTIFICATION_COOLDOWN_HOURS * 2)
         removed_count = 0
         
@@ -576,112 +639,16 @@ class NotificationHistory:
             self.logger.info(f"古い履歴削除: {removed_count}件")
 
 # ============================================================
-# 🆕 通知済み商品履歴管理（追跡用JSONファイル）
-# ============================================================
-
-class NotifiedProductsLog:
-    """
-    通知済み商品をJSONファイルに保存（追跡・デバッグ用）
-    
-    永続的な履歴として保存し、商品IDで追跡可能にする
-    """
-    
-    MAX_RECORDS = 500  # 最大保存件数
-    
-    def __init__(self, filepath: str = CONFIG.NOTIFIED_PRODUCTS_FILE):
-        self.filepath = Path(filepath)
-        self.logger = LOGGER
-        self.records: List[Dict[str, Any]] = []
-        self._load()
-    
-    def _load(self) -> None:
-        """ファイルから読み込み"""
-        if not self.filepath.exists():
-            self.logger.info(f"通知済み商品ログファイルなし（初回起動）: {self.filepath}")
-            return
-        
-        try:
-            with open(self.filepath, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-            
-            self.records = data.get('notified_products', [])
-            self.logger.info(f"通知済み商品ログ読み込み: {len(self.records)}件")
-        
-        except Exception as e:
-            self.logger.error(f"通知済み商品ログ読み込みエラー: {e}")
-            self.records = []
-    
-    def _save(self) -> None:
-        """ファイルに保存（アトミック書き込み）"""
-        try:
-            data = {
-                'last_updated': datetime.now().isoformat(),
-                'total_count': len(self.records),
-                'notified_products': self.records
-            }
-            
-            with atomic_write(self.filepath) as temp_path:
-                with open(temp_path, 'w', encoding='utf-8') as f:
-                    json.dump(data, f, ensure_ascii=False, indent=2)
-            
-            self.logger.info(f"通知済み商品ログ保存: {len(self.records)}件")
-        
-        except Exception as e:
-            self.logger.error(f"通知済み商品ログ保存エラー: {e}")
-    
-    def add_product(self, product: Product, notification_success: bool) -> None:
-        """
-        通知した商品を記録
-        
-        Args:
-            product: 商品データ
-            notification_success: 通知成功したか
-        """
-        record = {
-            'notified_at': datetime.now().isoformat(),
-            'notification_success': notification_success,
-            'item_id': product.item_id,
-            'item_url': product.item_url,
-            'name': product.name,
-            'price': product.price,
-            'store_name': product.store_name,
-            'img_url': product.img_url,
-            'hash': product.hash,
-            'scraped_at': product.scraped_at
-        }
-        
-        self.records.append(record)
-        
-        # 最大件数を超えたら古いものを削除
-        if len(self.records) > self.MAX_RECORDS:
-            removed = len(self.records) - self.MAX_RECORDS
-            self.records = self.records[-self.MAX_RECORDS:]
-            self.logger.info(f"古い通知済み商品ログ削除: {removed}件")
-        
-        self._save()
-        
-        self.logger.info(
-            f"📝 通知済み商品ログ追加: {product.name[:40]}... "
-            f"(ID: {product.item_id}, 成功: {notification_success})"
-        )
-    
-    def get_by_item_id(self, item_id: str) -> Optional[Dict[str, Any]]:
-        """商品IDで検索"""
-        for record in reversed(self.records):
-            if record.get('item_id') == item_id:
-                return record
-        return None
-    
-    def get_recent(self, count: int = 10) -> List[Dict[str, Any]]:
-        """最近の通知履歴を取得"""
-        return list(reversed(self.records[-count:]))
-
-# ============================================================
 # スナップショット管理（アトミック書き込み対応）
 # ============================================================
 
 def load_snapshot() -> Optional[Product]:
-    """前回の1位商品を読み込み"""
+    """
+    前回の1位商品を読み込み
+    
+    Returns:
+        Product or None
+    """
     snapshot_file = Path(CONFIG.SNAPSHOT_FILE)
     if not snapshot_file.exists():
         LOGGER.info("スナップショットファイルなし（初回実行）")
@@ -703,7 +670,12 @@ def load_snapshot() -> Optional[Product]:
         return None
 
 def save_snapshot(product: Product) -> None:
-    """現在の1位商品を保存（アトミック書き込み）"""
+    """
+    現在の1位商品を保存（アトミック書き込み）
+    
+    Args:
+        product: 商品データ
+    """
     snapshot_file = Path(CONFIG.SNAPSHOT_FILE)
     
     data = {
@@ -716,7 +688,7 @@ def save_snapshot(product: Product) -> None:
             with open(temp_path, 'w', encoding='utf-8') as f:
                 json.dump(data, f, ensure_ascii=False, indent=2)
         
-        LOGGER.info(f"スナップショット保存: 1位 {product.name[:30]}... (ID: {product.item_id})")
+        LOGGER.info(f"スナップショット保存: 1位 {product.name[:30]}...")
     
     except Exception as e:
         LOGGER.error(f"スナップショット保存エラー: {e}")
@@ -726,31 +698,41 @@ def save_snapshot(product: Product) -> None:
 # ============================================================
 
 def wait_for_dynamic_content(page: Page) -> bool:
-    """動的コンテンツの読み込み完了を待機"""
+    """
+    動的コンテンツの読み込み完了を待機
+    
+    Args:
+        page: Playwrightページオブジェクト
+    
+    Returns:
+        True: 成功, False: 失敗
+    """
     try:
         LOGGER.info("⏳ JavaScript並び替え待機中...")
         
         # 初期待機（JavaScriptが実行される時間を確保）
         time.sleep(3)
         
-        # DOM安定化確認
+        # DOM安定化確認（要素数とdata属性が変わらなくなるまで）
         LOGGER.info("⏳ DOM安定化確認中...")
         stable_count = 0
         last_item_count = 0
         last_first_item_name = ""
         
-        max_checks = 15
+        max_checks = 15  # 最大7.5秒待機（0.5秒 × 15回）
         
         for check_num in range(max_checks):
             current_items = page.query_selector_all("li.pj-search_item")
             current_count = len(current_items)
             
+            # 1位商品の商品名も確認（並び替えが完了しているか）
             current_first_item_name = ""
             if current_items:
                 first_img = current_items[0].query_selector("img")
                 if first_img:
                     current_first_item_name = first_img.get_attribute('alt') or ""
             
+            # 商品数と1位商品名の両方が安定しているか確認
             if (current_count == last_item_count and 
                 current_count > 0 and
                 current_first_item_name == last_first_item_name and
@@ -780,6 +762,7 @@ def wait_for_dynamic_content(page: Page) -> bool:
             last_first_item_name = current_first_item_name
             time.sleep(CONFIG.DOM_STABILITY_CHECK_INTERVAL)
         
+        # 安定化しなかったが商品はある場合
         if last_item_count > 0:
             LOGGER.warning(
                 f"⚠️ DOM完全安定化せず、商品数{last_item_count}件で続行"
@@ -793,27 +776,18 @@ def wait_for_dynamic_content(page: Page) -> bool:
         LOGGER.error(f"❌ 動的コンテンツ待機エラー: {e}")
         LOGGER.error(traceback.format_exc())
         return False
-
 def extract_product_from_element(item: Any, item_index: int = 0) -> Optional[Product]:
     """
-    Playwright要素から商品情報を抽出（v5.0: item_url, item_id追加）
+    Playwright要素から商品情報を抽出
+    
+    Args:
+        item: Playwright Element
+        item_index: 要素のインデックス（ログ用）
+    
+    Returns:
+        Product or None
     """
     try:
-        scraped_at = datetime.now().isoformat()
-        
-        # 🆕 商品詳細URL・商品ID取得
-        item_id = ""
-        item_url = ""
-        link_element = item.query_selector("a.cm-itemlist_itemcode_link")
-        if link_element:
-            href = link_element.get_attribute('href') or ""
-            if href:
-                # /item/3090061371260510 → 3090061371260510
-                item_id_match = re.search(r'/item/(\d+)', href)
-                if item_id_match:
-                    item_id = item_id_match.group(1)
-                    item_url = f"{CONFIG.SITE_BASE_URL}{href}"
-        
         # 商品名取得
         name = ""
         img_element = item.query_selector("img")
@@ -834,7 +808,7 @@ def extract_product_from_element(item: Any, item_index: int = 0) -> Optional[Pro
                 ""
             )
             if img_url and not img_url.startswith('http'):
-                img_url = f"{CONFIG.SITE_BASE_URL}{img_url}"
+                img_url = f"https://ec.treasure-f.com{img_url}"
         
         # 価格取得
         price = "0"
@@ -873,11 +847,7 @@ def extract_product_from_element(item: Any, item_index: int = 0) -> Optional[Pro
             name=full_name,
             price=price,
             img_url=img_url,
-            hash=generate_hash(full_name, price),
-            item_id=item_id,
-            item_url=item_url,
-            store_name=store_name,
-            scraped_at=scraped_at
+            hash=generate_hash(full_name, price)
         )
         
     except Exception as e:
@@ -887,7 +857,15 @@ def extract_product_from_element(item: Any, item_index: int = 0) -> Optional[Pro
 
 @contextmanager
 def get_browser_context() -> Iterator[tuple[Browser, Page]]:
-    """Playwrightブラウザコンテキストを安全に管理"""
+    """
+    Playwrightブラウザコンテキストを安全に管理
+    
+    Yields:
+        (Browser, Page)タプル
+    
+    Raises:
+        Exception: ブラウザ起動失敗時
+    """
     playwright_obj = None
     browser = None
     context = None
@@ -896,21 +874,25 @@ def get_browser_context() -> Iterator[tuple[Browser, Page]]:
     try:
         playwright_obj = sync_playwright().start()
         
+        # ブラウザ起動
         browser = playwright_obj.chromium.launch(
             headless=True,
             args=['--disable-blink-features=AutomationControlled']
         )
         
+        # コンテキスト作成
         context = browser.new_context(
             user_agent=CONFIG.USER_AGENT,
             viewport={'width': 1920, 'height': 1080}
         )
         
+        # ページ作成
         page = context.new_page()
         
         yield browser, page
         
     finally:
+        # リソース解放（逆順）
         if page:
             try:
                 page.close()
@@ -936,7 +918,15 @@ def get_browser_context() -> Iterator[tuple[Browser, Page]]:
                 LOGGER.warning(f"Playwright停止エラー（無視）: {e}")
 
 def scrape_top_products(limit: Optional[int] = None) -> List[Product]:
-    """上位商品を取得（動的サイト対応版）"""
+    """
+    上位商品を取得（動的サイト対応版）
+    
+    Args:
+        limit: 取得する商品数（Noneの場合は全て）
+    
+    Returns:
+        商品リスト
+    """
     LOGGER.info("=" * 60)
     LOGGER.info(f"📋 上位商品取得開始 (limit={limit or '全て'})")
     LOGGER.info("=" * 60)
@@ -946,7 +936,9 @@ def scrape_top_products(limit: Optional[int] = None) -> List[Product]:
             if attempt > 1:
                 LOGGER.info(f"🔄 リトライ {attempt}/{CONFIG.MAX_RETRIES}")
             
+            # Context Managerで確実にリソース解放
             with get_browser_context() as (browser, page):
+                # ページ読み込み
                 LOGGER.info(f"🌐 ページ読み込み中... {CONFIG.BASE_URL}")
                 page.goto(
                     CONFIG.BASE_URL,
@@ -954,20 +946,24 @@ def scrape_top_products(limit: Optional[int] = None) -> List[Product]:
                     wait_until="load"
                 )
                 
+                # 商品リスト表示待機
                 LOGGER.info("⏳ 商品リスト表示待機中...")
                 page.wait_for_selector(
                     "li.pj-search_item",
                     timeout=CONFIG.SELECTOR_TIMEOUT
                 )
                 
+                # ★重要: 動的コンテンツ完了待機
                 if not wait_for_dynamic_content(page):
                     raise Exception("動的コンテンツ待機失敗")
                 
+                # 全商品要素を取得
                 items = page.query_selector_all("li.pj-search_item")
                 
                 if not items:
                     raise Exception("商品要素が見つかりません")
                 
+                # 商品情報抽出
                 products: List[Product] = []
                 max_items = limit if limit else len(items)
                 
@@ -975,15 +971,12 @@ def scrape_top_products(limit: Optional[int] = None) -> List[Product]:
                     product = extract_product_from_element(items[i], item_index=i)
                     if product:
                         products.append(product)
-                        # 🆕 商品ID付きでログ出力
-                        LOGGER.info(
-                            f"   [{i+1}位] {product.name[:50]}... "
-                            f"¥{product.price} (ID: {product.item_id})"
-                        )
+                        LOGGER.info(f"   [{i+1}位] {product.name[:60]}... ¥{product.price}")
                 
                 if not products:
                     raise Exception("商品情報抽出失敗")
                 
+                # 成功ログ
                 LOGGER.info("=" * 60)
                 LOGGER.info(f"✅ 商品取得成功: {len(products)}件")
                 LOGGER.info("=" * 60)
@@ -995,6 +988,7 @@ def scrape_top_products(limit: Optional[int] = None) -> List[Product]:
                 f"❌ スクレイピングエラー (試行{attempt}/{CONFIG.MAX_RETRIES}): {e}"
             )
             
+            # リトライ判定
             if attempt < CONFIG.MAX_RETRIES:
                 wait_time = exponential_backoff(attempt)
                 LOGGER.info(f"⏰ {wait_time}秒後にリトライします...")
@@ -1006,7 +1000,15 @@ def scrape_top_products(limit: Optional[int] = None) -> List[Product]:
     return []
 
 def verify_top_consistency(limit: Optional[int] = None) -> List[Product]:
-    """上位商品の一貫性を複数回チェック"""
+    """
+    上位商品の一貫性を複数回チェック
+    
+    Args:
+        limit: 取得する商品数（Noneの場合は全て）
+    
+    Returns:
+        商品リスト（一貫性がない場合は空リスト）
+    """
     LOGGER.info("=" * 60)
     LOGGER.info("🔍 上位商品一貫性チェック開始")
     LOGGER.info(f"   チェック回数: {CONFIG.TOP1_CONSISTENCY_CHECKS}回")
@@ -1028,10 +1030,12 @@ def verify_top_consistency(limit: Optional[int] = None) -> List[Product]:
         all_checks.append(products)
         LOGGER.info(f"   取得: {len(products)}件")
         
+        # 最後のチェックでなければ待機
         if check_num < CONFIG.TOP1_CONSISTENCY_CHECKS:
             LOGGER.info(f"⏰ 次のチェックまで{CONFIG.TOP1_CONSISTENCY_INTERVAL}秒待機...")
             time.sleep(CONFIG.TOP1_CONSISTENCY_INTERVAL)
     
+    # 一貫性チェック（1位のハッシュが全て同じか）
     LOGGER.info("\n" + "=" * 60)
     LOGGER.info("📊 一貫性チェック結果")
     LOGGER.info("=" * 60)
@@ -1041,17 +1045,16 @@ def verify_top_consistency(limit: Optional[int] = None) -> List[Product]:
     
     for i, products in enumerate(all_checks, 1):
         if products:
-            LOGGER.info(
-                f"   チェック{i}: [1位] {products[0].name[:40]}... "
-                f"(ID: {products[0].item_id}, hash: {products[0].hash})"
-            )
+            LOGGER.info(f"   チェック{i}: [1位] {products[0].name[:50]}... (hash: {products[0].hash})")
     
     if len(unique_first_hashes) == 1:
+        # 全て同じ1位 = 一貫性あり
         LOGGER.info("=" * 60)
         LOGGER.info("✅ 一貫性確認: 全チェックで同じ1位")
         LOGGER.info("=" * 60)
-        return all_checks[0]
+        return all_checks[0]  # 最初のチェック結果を返す
     else:
+        # 異なる1位がある = 不安定
         LOGGER.warning("=" * 60)
         LOGGER.warning("⚠️ 一貫性なし: 1位が変動しています")
         LOGGER.warning(f"   異なるハッシュ数: {len(unique_first_hashes)}個")
@@ -1059,6 +1062,7 @@ def verify_top_consistency(limit: Optional[int] = None) -> List[Product]:
         LOGGER.warning("   → 誤通知を避けるため、通知をスキップします")
         LOGGER.warning("=" * 60)
         
+        # 管理用通知
         try:
             admin_msg = "[info][title]⚠️ トレジャー監視: 照合エラー[/title]"
             admin_msg += f"時刻: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
@@ -1067,7 +1071,7 @@ def verify_top_consistency(limit: Optional[int] = None) -> List[Product]:
             admin_msg += "【検出商品（1位のみ）】\n"
             for i, products in enumerate(all_checks, 1):
                 if products:
-                    admin_msg += f"{i}回目: {products[0].name[:50]}... (ID: {products[0].item_id})\n"
+                    admin_msg += f"{i}回目: {products[0].name[:60]}\n"
             admin_msg += "\n→ 一貫性なしのため通知スキップ[/info]"
             
             send_admin_notification(admin_msg)
@@ -1077,18 +1081,31 @@ def verify_top_consistency(limit: Optional[int] = None) -> List[Product]:
         return []
 
 # ============================================================
-# 通知機能（v5.0: 商品詳細URL・タイムスタンプ追加）
+# 通知機能（依存性注入対応）
 # ============================================================
 
 class ChatWorkNotifier:
     """ChatWork通知実装"""
     
     def __init__(self, token: str):
+        """
+        Args:
+            token: ChatWork APIトークン
+        """
         self.token = token
         self.logger = LOGGER
     
     def send(self, message: str, room_id: str) -> bool:
-        """メッセージを送信"""
+        """
+        メッセージを送信
+        
+        Args:
+            message: 送信メッセージ
+            room_id: ルームID
+        
+        Returns:
+            True: 成功, False: 失敗
+        """
         if not self.token or not room_id:
             self.logger.warning("⚠️ ChatWork通知設定なし")
             return False
@@ -1127,18 +1144,15 @@ class ChatWorkNotifier:
 
 def send_chatwork_notification(product: Product) -> bool:
     """
-    ChatWorkに通知を送信（v5.0: 商品詳細URL・タイムスタンプ追加）
+    ChatWorkに通知を送信（メインルーム）
+    
+    Args:
+        product: 商品データ
+    
+    Returns:
+        True: 成功, False: 失敗
     """
     notifier = ChatWorkNotifier(CONFIG.CHATWORK_TOKEN)
-    
-    # スクレイピング時刻をフォーマット
-    scraped_time = ""
-    if product.scraped_at:
-        try:
-            dt = datetime.fromisoformat(product.scraped_at)
-            scraped_time = dt.strftime('%H:%M:%S')
-        except:
-            scraped_time = "不明"
     
     message = "[info]"
     message += "━━━━━━━━━━━━━━━━━\n"
@@ -1147,23 +1161,20 @@ def send_chatwork_notification(product: Product) -> bool:
     message += f"🔗 {CONFIG.BASE_URL}\n"
     message += "━━━━━━━━━━━━━━━━━\n\n"
     message += f"■ {product.name}・{product.price}円\n\n"
-    
-    # 🆕 商品詳細URL追加
-    if product.item_url:
-        message += f"📦 商品詳細: {product.item_url}\n"
-    if product.item_id:
-        message += f"🆔 商品ID: {product.item_id}\n"
-    
-    # 🆕 スクレイピング時刻追加
-    if scraped_time:
-        message += f"⏰ 取得時刻: {scraped_time}\n"
-    
-    message += "\nーーーーーーーーーー[/info]"
+    message += "ーーーーーーーーーー[/info]"
     
     return notifier.send(message, CONFIG.CHATWORK_ROOM_ID)
 
 def send_admin_notification(message: str) -> bool:
-    """管理用ChatWorkルームに通知を送信"""
+    """
+    管理用ChatWorkルームに通知を送信
+    
+    Args:
+        message: 送信メッセージ
+    
+    Returns:
+        True: 成功, False: 失敗
+    """
     notifier = ChatWorkNotifier(CONFIG.CHATWORK_TOKEN)
     return notifier.send(message, CONFIG.ADMIN_ROOM_ID)
 
@@ -1173,44 +1184,93 @@ def send_admin_notification(message: str) -> bool:
 
 def check_and_notify(
     notification_history: NotificationHistory,
-    circuit_breaker: CircuitBreaker,
-    notified_products_log: NotifiedProductsLog  # 🆕 追加
+    circuit_breaker: CircuitBreaker
 ) -> bool:
     """
     上位商品をチェックして、現行1位より上位に新商品があれば全て通知
+    
+    Args:
+        notification_history: 通知履歴管理
+        circuit_breaker: Circuit Breaker
+    
+    Returns:
+        True: 成功, False: 失敗
     """
     
     # Circuit Breakerチェック
     if not circuit_breaker.is_available():
+        LOGGER.warning("⛔ Circuit Breaker Open: 処理スキップ")
         return False
     
     try:
-        # 前回の1位を読み込み
+        # 前回の1位を取得
         old_top1 = load_snapshot()
         
-        if old_top1:
-            LOGGER.info("=" * 60)
-            LOGGER.info("📖 前回の1位商品:")
-            LOGGER.info(f"   商品名: {old_top1.name[:70]}")
-            LOGGER.info(f"   価格: ¥{old_top1.price}")
-            LOGGER.info(f"   商品ID: {old_top1.item_id}")
-            LOGGER.info(f"   ハッシュ: {old_top1.hash}")
-            LOGGER.info("=" * 60)
+        # 一貫性確認を使用して上位商品を取得
+        if CONFIG.TOP1_CONSISTENCY_CHECKS > 1:
+            current_products = verify_top_consistency(limit=None)  # 全商品取得
         else:
-            LOGGER.info("📖 前回の1位商品: なし（初回実行）")
-        
-        # 現在の上位商品を取得（一貫性チェック付き）
-        current_products = verify_top_consistency(limit=30)
+            current_products = scrape_top_products(limit=None)
         
         if not current_products:
-            LOGGER.error("❌ 商品取得失敗 or 一貫性なし")
+            LOGGER.warning("⚠️ 商品取得失敗または一貫性なし")
+            
+            # ★★★ サイト障害の可能性を検知 ★★★
+            if circuit_breaker.state.failure_count >= 3:
+                # 3回連続失敗 = サイト障害の可能性が高い
+                try:
+                    admin_msg = "[info][title]🔴 トレジャー監視: サイト障害の可能性[/title]"
+                    admin_msg += f"時刻: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
+                    admin_msg += f"連続失敗回数: {circuit_breaker.state.failure_count}回\n"
+                    admin_msg += f"最終失敗時刻: {circuit_breaker.state.last_failure_time.strftime('%Y-%m-%d %H:%M:%S') if circuit_breaker.state.last_failure_time else 'N/A'}\n\n"
+                    admin_msg += "【状況】\n"
+                    admin_msg += "- 商品リスト取得が連続で失敗しています\n"
+                    admin_msg += "- サイトがダウンしている可能性があります\n"
+                    admin_msg += "- 手動でサイト確認をお願いします\n\n"
+                    admin_msg += f"URL: {CONFIG.BASE_URL}\n\n"
+                    admin_msg += "【対応】\n"
+                    admin_msg += "- 監視は継続します（自動リトライ）\n"
+                    admin_msg += f"- Circuit Breaker閾値({CONFIG.CIRCUIT_BREAKER_THRESHOLD}回)到達で一時停止\n"
+                    admin_msg += f"- 停止後{CONFIG.CIRCUIT_BREAKER_TIMEOUT}秒で自動再開[/info]"
+                    
+                    # 1回だけ通知（連続通知防止）
+                    if circuit_breaker.state.failure_count == 3:
+                        send_admin_notification(admin_msg)
+                        LOGGER.warning("📧 サイト障害通知を管理者に送信しました")
+                    
+                except Exception as e:
+                    LOGGER.error(f"管理通知エラー: {e}")
+            
             circuit_breaker.record_failure()
             return False
         
         # 成功記録
         circuit_breaker.record_success()
         
-        # 復旧通知チェック（省略）
+        # ★★★ サイト復旧通知 ★★★
+        if circuit_breaker.state.failure_count == 0 and old_top1 is not None:
+            # 前回失敗していた場合は復旧通知
+            try:
+                state_file = Path(CONFIG.STATE_FILE)
+                if state_file.exists():
+                    with open(state_file, 'r', encoding='utf-8') as f:
+                        state_data = json.load(f)
+                        cb_data = state_data.get('circuit_breaker', {})
+                        
+                        # 直前の失敗回数が3回以上だった場合
+                        if cb_data.get('failure_count', 0) >= 3:
+                            admin_msg = "[info][title]✅ トレジャー監視: サイト復旧確認[/title]"
+                            admin_msg += f"時刻: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n\n"
+                            admin_msg += "【状況】\n"
+                            admin_msg += "- サイトへのアクセスが正常に復旧しました\n"
+                            admin_msg += f"- 商品取得成功: {len(current_products)}件\n"
+                            admin_msg += f"- 現在の1位: {current_products[0].name[:60]}\n\n"
+                            admin_msg += "監視を正常に継続します[/info]"
+                            
+                            send_admin_notification(admin_msg)
+                            LOGGER.info("📧 サイト復旧通知を管理者に送信しました")
+            except Exception as e:
+                LOGGER.warning(f"復旧通知エラー（無視）: {e}")
         
         # 現在の1位
         current_top1 = current_products[0]
@@ -1221,8 +1281,6 @@ def check_and_notify(
             LOGGER.info("🎉 初回実行: 1位を登録")
             LOGGER.info(f"   商品名: {current_top1.name[:80]}")
             LOGGER.info(f"   価格: ¥{current_top1.price}")
-            LOGGER.info(f"   商品ID: {current_top1.item_id}")
-            LOGGER.info(f"   詳細URL: {current_top1.item_url}")
             LOGGER.info("=" * 60)
             save_snapshot(current_top1)
             LOGGER.info("ℹ️  初回実行のため通知はスキップしました")
@@ -1234,18 +1292,23 @@ def check_and_notify(
         
         for i, product in enumerate(current_products):
             if product.hash == old_top1.hash:
+                # 前回1位を発見
                 old_top1_found = True
                 LOGGER.info(f"   前回1位発見: [{i+1}位] {product.name[:60]}")
                 break
             else:
+                # 前回1位より上位の新商品
                 new_top_products.append(product)
         
         if not old_top1_found:
+            # 前回1位が見つからない = 圏外に落ちた
             LOGGER.info("=" * 60)
             LOGGER.info("🎉 前回1位が圏外に! 現在の上位商品を通知")
             LOGGER.info(f"🔙 前回1位: {old_top1.name[:80]}")
             LOGGER.info(f"🆕 現在1位: {current_top1.name[:80]}")
             LOGGER.info("=" * 60)
+            
+            # 現在の1位のみ通知（前回1位が見つからない場合）
             new_top_products = [current_top1]
         
         # 新商品があれば通知
@@ -1259,8 +1322,6 @@ def check_and_notify(
                 LOGGER.info(f"\n[{i}/{len(new_top_products)}] 通知チェック:")
                 LOGGER.info(f"   商品: {product.name[:70]}")
                 LOGGER.info(f"   価格: ¥{product.price}")
-                LOGGER.info(f"   商品ID: {product.item_id}")
-                LOGGER.info(f"   詳細URL: {product.item_url}")
                 
                 # 重複通知チェック
                 should_send = notification_history.should_notify(
@@ -1269,14 +1330,11 @@ def check_and_notify(
                 )
                 
                 if should_send:
-                    success = send_chatwork_notification(product)
-                    if success:
+                    if send_chatwork_notification(product):
                         notification_history.add_notification(product)
-                        notified_products_log.add_product(product, True)  # 🆕 ログ追加
                         notified_count += 1
                         LOGGER.info(f"   ✅ 通知送信成功")
                     else:
-                        notified_products_log.add_product(product, False)  # 🆕 失敗もログ
                         LOGGER.warning(f"   ⚠️ 通知送信失敗")
                 else:
                     LOGGER.info(f"   ⏸️  通知スキップ（再通知間隔内）")
@@ -1285,12 +1343,14 @@ def check_and_notify(
             LOGGER.info(f"📤 通知完了: {notified_count}/{len(new_top_products)}件送信")
             LOGGER.info("=" * 60)
             
-            # スナップショット更新
+            # スナップショット更新（現在の1位を保存）
             save_snapshot(current_top1)
             return True
         else:
+            # 上位変動なし
             LOGGER.info("✅ 上位変動なし: 前回1位は依然として1位またはそれより上")
             
+            # 1位が変わっていたらスナップショット更新
             if current_top1.hash != old_top1.hash:
                 LOGGER.info(f"   ※1位が変更: {old_top1.name[:50]} → {current_top1.name[:50]}")
                 save_snapshot(current_top1)
@@ -1307,7 +1367,7 @@ def main() -> None:
     """メイン処理"""
     try:
         LOGGER.info("┏" + "━" * 58 + "┓")
-        LOGGER.info("🚀 トレジャーファクトリー 1位監視プログラム v5.0 起動")
+        LOGGER.info("🚀 トレジャーファクトリー 1位監視プログラム v4.0 起動")
         LOGGER.info("┗" + "━" * 58 + "┛")
         LOGGER.info("⚙️  設定:")
         LOGGER.info(f"   - 監視対象: 上位商品（前回1位より上）")
@@ -1319,17 +1379,15 @@ def main() -> None:
         LOGGER.info(f"   - Circuit Breaker閾値: {CONFIG.CIRCUIT_BREAKER_THRESHOLD}回")
         LOGGER.info(f"   - 🗑️ログ自動削除: {CONFIG.LOG_ROTATION_HOURS}時間ごとにローテーション")
         LOGGER.info(f"   - 📊管理通知: ルームID {CONFIG.ADMIN_ROOM_ID}")
-        LOGGER.info(f"   - 🆕 通知済み商品ログ: {CONFIG.NOTIFIED_PRODUCTS_FILE}")
         LOGGER.info("┏" + "━" * 58 + "┛")
         
         notification_history = NotificationHistory()
         circuit_breaker = CircuitBreaker()
-        notified_products_log = NotifiedProductsLog()  # 🆕 追加
         
-        # 統計レポート用
+        # ★統計レポート用の変数
         start_time = datetime.now()
         last_report_time = datetime.now()
-        report_interval_seconds = 3600
+        report_interval_seconds = 3600  # 1時間
         
     except Exception as e:
         LOGGER.error(f"❌ 初期化エラー: {e}")
@@ -1350,15 +1408,15 @@ def main() -> None:
             )
             LOGGER.info(f"{'='*60}")
             
-            # 🆕 notified_products_logを渡す
-            success = check_and_notify(notification_history, circuit_breaker, notified_products_log)
+            # 1位チェック
+            success = check_and_notify(notification_history, circuit_breaker)
             
             if success:
                 success_count += 1
             else:
                 failure_count += 1
             
-            # 1時間ごとの統計レポート送信
+            # ★1時間ごとの統計レポート送信
             current_time = datetime.now()
             elapsed_since_report = (current_time - last_report_time).total_seconds()
             
@@ -1384,7 +1442,10 @@ def main() -> None:
                     
                     send_admin_notification(report)
                     
+                    # レポート時刻を更新
                     last_report_time = current_time
+                    
+                    # カウンターをリセット（1時間の統計）
                     loop_count = 0
                     success_count = 0
                     failure_count = 0
@@ -1395,14 +1456,17 @@ def main() -> None:
                     LOGGER.error(f"❌ レポート送信エラー: {e}")
                     LOGGER.error(traceback.format_exc())
             
-            # 動的待機時間
+            # ★★★ 動的待機時間: Circuit Breaker状態に応じて調整 ★★★
             if circuit_breaker.state.is_open:
+                # Circuit Open時は長めに待機
                 wait_time = CONFIG.CIRCUIT_BREAKER_TIMEOUT
                 LOGGER.warning(f"⏰ Circuit Breaker Open: {wait_time}秒待機後に再試行...")
             elif circuit_breaker.state.failure_count >= 2:
+                # 連続失敗が続いている場合は少し長めに待機
                 wait_time = CONFIG.CHECK_INTERVAL * 2
                 LOGGER.info(f"⏰ 連続失敗中: 通常の2倍({wait_time}秒)待機...")
             else:
+                # 通常時
                 wait_time = CONFIG.CHECK_INTERVAL
                 LOGGER.info(f"⏰ 次回チェックまで {wait_time}秒待機...")
             
@@ -1421,6 +1485,7 @@ def main() -> None:
             failure_count += 1
             circuit_breaker.record_failure()
             
+            # Circuit Breaker Openの場合は待機
             if circuit_breaker.state.is_open:
                 wait_time = CONFIG.CIRCUIT_BREAKER_TIMEOUT
                 LOGGER.warning(f"⏰ Circuit Breaker Open: {wait_time}秒待機...")

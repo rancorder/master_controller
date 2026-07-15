@@ -10,14 +10,11 @@ from typing import Final, Generator, List, Optional, Tuple
 from playwright.sync_api import BrowserContext, Page, sync_playwright, TimeoutError as PlaywrightTimeout
 
 class Constants:
-    # 複数URLに対応
-    BASE_URL: Final[str] = "https://www.kantocamera.com/collections/all?sort_by=created-descending"
-    LEICA_URL: Final[str] = "https://www.kantocamera.com/collections/leica?sort_by=created-descending"
-    
-    TARGET_URLS: Final[Tuple[str, ...]] = (
-        BASE_URL,
-        # LEICA_URL,  # 必要に応じて追加
+    BASE_URL: Final[str] = (
+        "https://www.kantocamera.com/collections/all?sort_by=created-descending"
     )
+
+    TARGET_URLS: Final[list[str]] = [BASE_URL]
     
     PAGE_LOAD_TIMEOUT_MS: Final[int] = 60000
     STABILITY_WAIT_MS: Final[int] = 3000
